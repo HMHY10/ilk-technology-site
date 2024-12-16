@@ -26,7 +26,10 @@ export const Header = () => {
         <div className="flex items-center justify-between h-full">
           <Logo />
           <Navigation />
-          <ContactInfo isScrolled={isScrolled} />
+          <div className="flex items-center gap-6">
+            <SearchBar />
+            <ContactInfo isScrolled={isScrolled} />
+          </div>
         </div>
       </div>
     </header>
