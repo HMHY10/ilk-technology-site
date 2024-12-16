@@ -25,14 +25,14 @@ export const Stats = () => {
   ];
 
   return (
-    <div className="bg-secondary py-16">
+    <div className="bg-primary py-16">
       <div className="container">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {stats.map((stat, index) => (
             <div key={index} className="stat-item">
-              <stat.icon className="mb-4 h-8 w-8 text-primary" />
-              <div className="text-3xl font-bold">{stat.value}</div>
-              <div className="text-sm text-gray-400">{stat.label}</div>
+              <stat.icon className="mb-4 h-8 w-8 text-accent" />
+              <div className="text-3xl font-bold text-white">{stat.value}</div>
+              <div className="text-sm text-muted">{stat.label}</div>
             </div>
           ))}
         </div>

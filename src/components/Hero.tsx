@@ -14,17 +14,22 @@ export const Hero = () => {
       
       <div className="relative z-10 flex min-h-screen items-center justify-center px-4">
         <div className="text-center">
-          <h1 className="section-title mb-6 animate-fade-up">
-            ELITE COMMERCIAL
+          <img
+            src="/lovable-uploads/5f5aacb8-6e91-4b91-9187-4f920bfdb2fa.png"
+            alt="ILK Technologies"
+            className="mx-auto mb-8 h-24 w-auto"
+          />
+          <h1 className="section-title mb-6 animate-fade-up text-primary">
+            COMMERCIAL REFRIGERATION
             <br />
-            REFRIGERATION
+            SOLUTIONS
           </h1>
-          <p className="mb-8 animate-fade-up text-lg text-gray-300">
+          <p className="mb-8 animate-fade-up text-lg text-secondary">
             Industry-leading cooling solutions for your business
           </p>
           <Button
             size="lg"
-            className="animate-fade-up bg-primary text-white hover:bg-primary/90"
+            className="animate-fade-up bg-accent text-white hover:bg-accent/90"
           >
             Get Started
           </Button>

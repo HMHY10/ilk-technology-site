@@ -25,11 +25,11 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#F97316",
+          DEFAULT: "#0A1E3D", // Dark navy
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#222222",
+          DEFAULT: "#8E9196", // Medium gray
           foreground: "#FFFFFF",
         },
         destructive: {
@@ -37,16 +37,16 @@ export default {
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "#374151",
-          foreground: "#9CA3AF",
+          DEFAULT: "#E5E7EB", // Light gray
+          foreground: "#0A1E3D",
         },
         accent: {
-          DEFAULT: "#F97316",
+          DEFAULT: "#EA384C", // Red accent
           foreground: "#FFFFFF",
         },
         card: {
-          DEFAULT: "#1A1F2C",
-          foreground: "#FFFFFF",
+          DEFAULT: "#FFFFFF",
+          foreground: "#0A1E3D",
         },
       },
       fontFamily: {
