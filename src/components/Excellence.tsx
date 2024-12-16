@@ -1,4 +1,4 @@
-import { Award, Shield, Tool, Zap } from "lucide-react";
+import { Award, Shield, Zap } from "lucide-react";
 
 export const Excellence = () => {
   const capabilities = [
@@ -13,7 +13,7 @@ export const Excellence = () => {
       description: "Rigorous safety protocols and compliance measures",
     },
     {
-      icon: Tool,
+      icon: Award,
       title: "Expert Team",
       description: "Highly trained and certified technicians",
     },
