@@ -37,24 +37,30 @@ export const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger>About</NavigationMenuTrigger>
+                <NavigationMenuTrigger>Condensing Units</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-6 w-[400px]">
                     <div className="text-sm">
-                      <h4 className="font-medium leading-none mb-3">Company</h4>
-                      <p className="text-muted-foreground">Learn about our history and mission</p>
+                      <h4 className="font-medium leading-none mb-3">Units</h4>
+                      <p className="text-muted-foreground">Industrial Condensing Solutions</p>
                     </div>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Contact</NavigationMenuTrigger>
+                <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                  About
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>News</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-6 w-[400px]">
                     <div className="text-sm">
-                      <h4 className="font-medium leading-none mb-3">Get in Touch</h4>
-                      <p className="text-muted-foreground">Find our location and contact details</p>
+                      <h4 className="font-medium leading-none mb-3">Latest Updates</h4>
+                      <p className="text-muted-foreground">Stay informed with our latest news and developments</p>
                     </div>
                   </div>
                 </NavigationMenuContent>
