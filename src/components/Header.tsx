@@ -78,7 +78,7 @@ export const Header = () => {
                 className="pl-8 w-[200px] h-9"
               />
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col gap-1">
               <a href="tel:+15551234567" className="flex items-center gap-2 text-sm text-primary hover:text-accent">
                 <Phone className="h-4 w-4" />
                 <span>+1 (555) 123-4567</span>
