@@ -9,7 +9,7 @@ export const ContactInfo = ({ isScrolled }: ContactInfoProps) => (
     <a
       href="tel:+15551234567"
       className={`flex items-center gap-2 text-sm ${
-        isScrolled ? "text-white" : "text-white"
+        isScrolled ? "text-primary" : "text-white"
       } hover:text-accent`}
     >
       <Phone className="h-4 w-4" />
@@ -18,7 +18,7 @@ export const ContactInfo = ({ isScrolled }: ContactInfoProps) => (
     <a
       href="mailto:info@ilktechnologies.com"
       className={`flex items-center gap-2 text-sm ${
-        isScrolled ? "text-white" : "text-white"
+        isScrolled ? "text-primary" : "text-white"
       } hover:text-accent`}
     >
       <Mail className="h-4 w-4" />
