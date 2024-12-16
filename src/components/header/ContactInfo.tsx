@@ -1,4 +1,5 @@
 import { Phone, Mail } from "lucide-react";
+import { SearchBar } from "./SearchBar";
 
 interface ContactInfoProps {
   isScrolled: boolean;
@@ -24,5 +25,6 @@ export const ContactInfo = ({ isScrolled }: ContactInfoProps) => (
       <Mail className="h-4 w-4" />
       <span>info@ilktechnologies.com</span>
     </a>
+    <SearchBar />
   </div>
 );
