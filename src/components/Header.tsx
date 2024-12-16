@@ -11,9 +11,9 @@ import { Input } from "@/components/ui/input";
 
 export const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 bg-white z-50 h-20">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-full">
           {/* Logo */}
           <img
             src="/lovable-uploads/5f5aacb8-6e91-4b91-9187-4f920bfdb2fa.png"
@@ -78,7 +78,7 @@ export const Header = () => {
                 className="pl-8 w-[200px] h-9"
               />
             </div>
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col items-end gap-1">
               <a href="tel:+15551234567" className="flex items-center gap-2 text-sm text-primary hover:text-accent">
                 <Phone className="h-4 w-4" />
                 <span>+1 (555) 123-4567</span>
