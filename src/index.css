@@ -25,3 +25,19 @@
 .section-title {
   @apply font-mono text-3xl font-bold md:text-4xl lg:text-5xl;
 }
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) scale(1.05);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  100% {
+    transform: translateY(0px) scale(1.05);
+  }
+}
+
+.floating-iceberg {
+  animation: float 8s ease-in-out infinite;
+}
