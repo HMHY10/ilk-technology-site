@@ -5,21 +5,21 @@ export const Hero = () => {
     <div className="relative min-h-screen pt-20">
       <div className="absolute inset-0">
         <img
-          src="/lovable-uploads/88b7bec5-0d88-4282-bb59-323234082e9b.png"
-          alt="Commercial Refrigeration"
-          className="h-full w-full object-cover opacity-50"
+          src="/lovable-uploads/40ea40a6-3369-4a2c-bc4f-4c3fa844d0f4.png"
+          alt="Iceberg Refrigeration"
+          className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 hero-gradient" />
       </div>
       
       <div className="relative z-10 flex min-h-[calc(100vh-5rem)] items-center justify-center px-4">
         <div className="text-center">
-          <h1 className="section-title mb-6 animate-fade-up text-primary">
+          <h1 className="section-title mb-6 animate-fade-up text-white">
             COMMERCIAL REFRIGERATION
             <br />
             SOLUTIONS
           </h1>
-          <p className="mb-8 animate-fade-up text-lg text-secondary">
+          <p className="mb-8 animate-fade-up text-lg text-white">
             Industry-leading cooling solutions for your business
           </p>
           <Button
