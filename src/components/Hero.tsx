@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Snow } from "@/components/Snow";
 
 export const Hero = () => {
   return (
@@ -11,6 +12,8 @@ export const Hero = () => {
         />
         <div className="absolute inset-0 hero-gradient" />
       </div>
+      
+      <Snow />
       
       <div className="relative z-10 flex min-h-screen items-center justify-center px-4 pt-20">
         <div className="text-center">
