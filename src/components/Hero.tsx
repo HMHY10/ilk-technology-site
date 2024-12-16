@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export const Hero = () => {
   return (
     <div className="relative min-h-screen">
-      <div className="absolute inset-0 mt-20">
+      <div className="absolute inset-0 mt-[80px]">
         <img
           src="/lovable-uploads/40ea40a6-3369-4a2c-bc4f-4c3fa844d0f4.png"
           alt="Iceberg Refrigeration"
@@ -12,7 +12,7 @@ export const Hero = () => {
         <div className="absolute inset-0 hero-gradient" />
       </div>
       
-      <div className="relative z-10 flex min-h-[calc(100vh-5rem)] items-center justify-center px-4 mt-20">
+      <div className="relative z-10 flex min-h-[calc(100vh-5rem)] items-center justify-center px-4 mt-[80px]">
         <div className="text-center">
           <h1 className="section-title mb-6 animate-fade-up text-white">
             COMMERCIAL REFRIGERATION
