@@ -7,7 +7,7 @@ export const SearchBar = () => (
     <Input
       type="search"
       placeholder="Search..."
-      className="pl-8 w-[200px] h-9 bg-black/20 backdrop-blur-sm border-white/20 text-white placeholder:text-white/60 focus:bg-white/20"
+      className="pl-8 w-[200px] h-9 bg-white/10 border-white/20 text-white placeholder:text-white/60"
     />
   </div>
 );
