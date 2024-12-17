@@ -17,15 +17,15 @@ export const Navigation = ({ isScrolled }: NavigationProps) => {
   return (
     <NavigationMenu orientation={isMobile ? "vertical" : "horizontal"} className={isMobile ? "w-full" : ""}>
       <NavigationMenuList 
-        className={`${isScrolled ? "text-primary" : "text-white"} ${
+        className={`${isScrolled ? "text-primary" : "text-white/90 font-medium"} ${
           isMobile ? "flex-col items-start space-y-4" : "flex-row items-center space-x-4"
         }`}
       >
         <NavigationMenuItem className={isMobile ? "w-full" : ""}>
           <NavigationMenuTrigger 
             className={`${isMobile ? "w-full" : ""} hover:${
-              isScrolled ? "bg-primary/10" : "bg-white/10"
-            } text-[#EA384C]`}
+              isScrolled ? "bg-primary/10" : "bg-white/20"
+            } text-[#EA384C] font-bold`}
           >
             Arneg
           </NavigationMenuTrigger>
@@ -42,7 +42,7 @@ export const Navigation = ({ isScrolled }: NavigationProps) => {
         <NavigationMenuItem className={isMobile ? "w-full" : ""}>
           <NavigationMenuTrigger 
             className={`${isMobile ? "w-full" : ""} hover:${
-              isScrolled ? "bg-primary/10" : "bg-white/10"
+              isScrolled ? "bg-primary/10" : "bg-white/20"
             }`}
           >
             Condensing Units
@@ -60,7 +60,7 @@ export const Navigation = ({ isScrolled }: NavigationProps) => {
         <NavigationMenuItem className={isMobile ? "w-full" : ""}>
           <NavigationMenuLink
             className={`${isMobile ? "w-full" : ""} hover:${
-              isScrolled ? "bg-primary/10" : "bg-white/10"
+              isScrolled ? "bg-primary/10" : "bg-white/20"
             } group inline-flex h-10 items-center ${
               isMobile ? "justify-start" : "justify-center"
             } rounded-md px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50`}
