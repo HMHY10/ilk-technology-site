@@ -15,12 +15,21 @@ export const BrandCarousel = () => {
       name: "INTRAC Design & Display",
       logo: "/lovable-uploads/93685d2f-0194-410b-8685-4e05f4c9cb43.png"
     },
+    {
+      name: "Frigo Tecnica",
+      logo: "/lovable-uploads/76b23ff7-efa3-486a-9543-807697ddd20b.png"
+    },
+    {
+      name: "Oscartielle",
+      logo: "/lovable-uploads/7c833cb1-70df-440b-9311-9911c75d6cde.png"
+    },
+    {
+      name: "Incold",
+      logo: "/lovable-uploads/d47e8a46-3c00-48b8-8581-29ced4362b4c.png"
+    },
     { name: "CoolTech Solutions" },
     { name: "Arctic Systems" },
     { name: "Frost Industries" },
-    { name: "Polar Refrigeration" },
-    { name: "IceBerg Cooling" },
-    { name: "North Star Systems" },
   ];
 
   const plugin = useRef(
