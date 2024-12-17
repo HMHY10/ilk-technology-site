@@ -12,7 +12,7 @@ export const ContactInfo = ({ isScrolled }: ContactInfoProps) => (
         isScrolled ? "text-primary hover:text-accent" : "text-white hover:text-accent"
       }`}
     >
-      <Phone className="h-4 w-4" />
+      <Phone className="h-4 w-4 sm:text-inherit text-accent" />
       <span className="hidden sm:inline">020 8123 4567</span>
     </a>
     <a
@@ -21,7 +21,7 @@ export const ContactInfo = ({ isScrolled }: ContactInfoProps) => (
         isScrolled ? "text-primary hover:text-accent" : "text-white hover:text-accent"
       }`}
     >
-      <Mail className="h-4 w-4" />
+      <Mail className="h-4 w-4 sm:text-inherit text-accent" />
       <span>info@ilktechnologies.com</span>
     </a>
   </div>
