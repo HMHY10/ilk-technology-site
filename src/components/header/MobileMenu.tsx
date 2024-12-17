@@ -9,9 +9,9 @@ export const MobileMenu = () => {
         <MoreVertical className="h-6 w-6 text-primary" />
       </SheetTrigger>
       <SheetContent side="left" className="w-[300px] bg-white">
-        <div className="mt-6">
+        <nav className="mt-6">
           <Navigation isScrolled={true} />
-        </div>
+        </nav>
       </SheetContent>
     </Sheet>
   );
