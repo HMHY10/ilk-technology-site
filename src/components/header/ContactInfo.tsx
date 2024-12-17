@@ -17,12 +17,12 @@ export const ContactInfo = ({ isScrolled }: ContactInfoProps) => (
     </a>
     <a
       href="mailto:info@ilktechnologies.com"
-      className={`hidden sm:flex items-center gap-2 text-sm ${
+      className={`flex items-center gap-2 text-sm ${
         isScrolled ? "text-primary hover:text-accent" : "text-white hover:text-accent"
       }`}
     >
       <Mail className="h-4 w-4 sm:text-inherit text-accent" />
-      <span>info@ilktechnologies.com</span>
+      <span className="hidden sm:inline">info@ilktechnologies.com</span>
     </a>
   </div>
 );
