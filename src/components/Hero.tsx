@@ -7,8 +7,8 @@ export const Hero = () => {
     <div className="relative min-h-screen">
       <div className="absolute inset-0">
         <img
-          src="/lovable-uploads/40ea40a6-3369-4a2c-bc4f-4c3fa844d0f4.png"
-          alt="Iceberg Refrigeration"
+          src="/lovable-uploads/69640c38-17ed-4b5c-a463-2ea2eb609240.png"
+          alt="Ice Cubes"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 hero-gradient" />
