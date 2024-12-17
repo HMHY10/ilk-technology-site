@@ -8,6 +8,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Snowflake } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
+import { useEffect, useRef } from "react";
 
 export const Hero = () => {
   const brands = [
@@ -18,6 +20,10 @@ export const Hero = () => {
     { name: "IceBerg Cooling" },
     { name: "North Star Systems" },
   ];
+
+  const plugin = useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
 
   return (
     <div className="relative min-h-screen">
@@ -59,6 +65,7 @@ export const Hero = () => {
               align: "start",
               loop: true,
             }}
+            plugins={[plugin.current]}
             className="mx-auto w-full max-w-5xl"
           >
             <CarouselContent>
