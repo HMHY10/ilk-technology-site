@@ -3,6 +3,7 @@ import { Logo } from "./header/Logo";
 import { Navigation } from "./header/Navigation";
 import { SearchBar } from "./header/SearchBar";
 import { ContactInfo } from "./header/ContactInfo";
+import { MobileMenu } from "./header/MobileMenu";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,10 +26,17 @@ export const Header = () => {
       <div className="container mx-auto px-4 h-full">
         <div className="flex items-center justify-between h-full">
           <Logo />
-          <Navigation isScrolled={isScrolled} />
+          <div className="hidden md:block">
+            <Navigation isScrolled={isScrolled} />
+          </div>
           <div className="flex items-center gap-6">
-            <SearchBar isScrolled={isScrolled} />
+            <div className="hidden md:block">
+              <SearchBar isScrolled={isScrolled} />
+            </div>
             <ContactInfo isScrolled={isScrolled} />
+            <div className="md:hidden">
+              <MobileMenu />
+            </div>
           </div>
         </div>
       </div>
