@@ -13,7 +13,7 @@ export const ContactInfo = ({ isScrolled }: ContactInfoProps) => (
       }`}
     >
       <Phone className="h-4 w-4" />
-      <span>+1 (555) 123-4567</span>
+      <span>020 8123 4567</span>
     </a>
     <a
       href="mailto:info@ilktechnologies.com"
