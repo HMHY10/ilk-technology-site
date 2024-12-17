@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 
 export const HeroContent = () => {
+  const scrollToContact = () => {
+    const contactSection = document.querySelector('#contact');
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="relative z-10 flex min-h-screen items-center justify-center px-4 pt-20">
       <div className="text-left">
@@ -17,8 +22,9 @@ export const HeroContent = () => {
         <Button
           size="lg"
           className="animate-fade-up bg-accent text-white hover:bg-accent/90"
+          onClick={scrollToContact}
         >
-          Enquire Now
+          Let's Talk
         </Button>
       </div>
     </div>
