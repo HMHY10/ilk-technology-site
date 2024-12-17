@@ -15,7 +15,9 @@ export const Navigation = ({ isScrolled }: NavigationProps) => (
   <NavigationMenu>
     <NavigationMenuList className={isScrolled ? "text-primary" : "text-white"}>
       <NavigationMenuItem>
-        <NavigationMenuTrigger className={`hover:${isScrolled ? "bg-primary/10" : "bg-white/10"}`}>
+        <NavigationMenuTrigger 
+          className={`hover:${isScrolled ? "bg-primary/10" : "bg-white/10"} text-[#EA384C]`}
+        >
           Arneg
         </NavigationMenuTrigger>
         <NavigationMenuContent>
@@ -50,20 +52,6 @@ export const Navigation = ({ isScrolled }: NavigationProps) => (
         >
           About
         </NavigationMenuLink>
-      </NavigationMenuItem>
-
-      <NavigationMenuItem>
-        <NavigationMenuTrigger className={`hover:${isScrolled ? "bg-primary/10" : "bg-white/10"}`}>
-          News
-        </NavigationMenuTrigger>
-        <NavigationMenuContent>
-          <div className="grid gap-3 p-6 w-[400px] bg-white">
-            <div className="text-sm">
-              <h4 className="font-medium leading-none mb-3 text-primary">Latest Updates</h4>
-              <p className="text-muted-foreground">Stay informed with our latest news and developments</p>
-            </div>
-          </div>
-        </NavigationMenuContent>
       </NavigationMenuItem>
     </NavigationMenuList>
   </NavigationMenu>
