@@ -17,7 +17,7 @@ export const Navigation = ({ isScrolled }: NavigationProps) => {
   return (
     <NavigationMenu orientation={isMobile ? "vertical" : "horizontal"} className={isMobile ? "w-full" : ""}>
       <NavigationMenuList 
-        className={`${isScrolled ? "text-primary" : "text-white/90 font-medium"} ${
+        className={`${isScrolled ? "text-primary" : "text-primary font-medium"} ${
           isMobile ? "flex-col items-start space-y-4" : "flex-row items-center space-x-4"
         }`}
       >
