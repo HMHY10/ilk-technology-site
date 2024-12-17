@@ -46,7 +46,7 @@ export const Hero = () => {
             size="lg"
             className="animate-fade-up bg-accent text-white hover:bg-accent/90"
           >
-            Get Started
+            Enquire Now
           </Button>
         </div>
       </div>
