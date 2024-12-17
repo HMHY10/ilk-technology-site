@@ -7,12 +7,12 @@ export const HeroContent = () => {
         <h1 className="section-title mb-6 animate-fade-up">
           <span className="text-primary">Hello,</span>
           <br />
-          We're ILK Technology,
+          <span className="text-white">We're ILK Technology,</span>
           <br />
-          Commercial Refrigeration Supplier and{" "}
+          <span className="text-white">Commercial Refrigeration Supplier and{" "}</span>
           <span className="text-[#ea384c]">Arneg</span>
           <br />
-          Distribution Partner here in the UK
+          <span className="text-white">Distribution Partner here in the UK</span>
         </h1>
         <Button
           size="lg"
