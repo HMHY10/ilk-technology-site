@@ -7,8 +7,8 @@ export const HeroContent = () => {
   };
 
   return (
-    <div className="relative z-10 flex min-h-screen items-center justify-center px-4 pt-20">
-      <div className="text-left">
+    <div className="relative z-10 flex min-h-screen items-center justify-center px-4 pt-10">
+      <div className="text-left -mt-32">
         <h1 className="section-title mb-6 animate-fade-up">
           <span className="text-primary">Hello,</span>
           <br />
