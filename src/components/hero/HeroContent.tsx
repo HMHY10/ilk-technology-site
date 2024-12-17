@@ -5,7 +5,7 @@ export const HeroContent = () => {
     <div className="relative z-10 flex min-h-screen items-center justify-center px-4 pt-20">
       <div className="text-left">
         <h1 className="section-title mb-6 animate-fade-up">
-          <span className="text-[#1EAEDB]">Hello,</span>
+          <span className="text-[#221F26]">Hello,</span>
           <br />
           We're ILK Technology,
           <br />
