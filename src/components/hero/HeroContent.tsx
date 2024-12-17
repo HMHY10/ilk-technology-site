@@ -1,22 +1,31 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 export const HeroContent = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="relative z-10 flex min-h-screen items-center justify-center px-4 pt-20">
-      <div className="text-center">
-        <h1 className="section-title mb-6 animate-fade-up text-white">
-          COMMERCIAL REFRIGERATION
+    <div className="relative z-10 flex min-h-screen items-start justify-start px-8 pt-32 md:px-16">
+      <div className="text-left">
+        <h1 className="section-title mb-4 animate-fade-up text-primary">
+          Hello,
           <br />
-          SOLUTIONS
+          We're ILK Technology Ltd,
+          <br />
+          <span className="text-[1.8rem] md:text-[2.2rem] lg:text-[2.5rem] leading-normal">
+            Commercial Refrigeration Supplier and{" "}
+            <span className="text-accent">Arneg</span>
+            <br />
+            Distributor Partner here in th UK.
+          </span>
         </h1>
-        <p className="mb-8 animate-fade-up text-lg text-white">
-          Industry-leading cooling solutions for your business
-        </p>
         <Button
           size="lg"
-          className="animate-fade-up bg-accent text-white hover:bg-accent/90"
+          variant="outline"
+          className="animate-fade-up mt-6 text-primary hover:bg-primary hover:text-white"
+          onClick={() => navigate("/contact")}
         >
-          Enquire Now
+          Let's Talk
         </Button>
       </div>
     </div>

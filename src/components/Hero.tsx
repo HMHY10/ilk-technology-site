@@ -7,11 +7,11 @@ export const Hero = () => {
     <div className="relative min-h-screen">
       <div className="absolute inset-0">
         <img
-          src="/lovable-uploads/69640c38-17ed-4b5c-a463-2ea2eb609240.png"
+          src="/lovable-uploads/12914c83-2f7b-4e37-ae8d-a028edc73441.png"
           alt="Ice Cubes"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 hero-gradient" />
+        <div className="absolute inset-0 bg-white/90" />
       </div>
       
       <ThreeSnow />
