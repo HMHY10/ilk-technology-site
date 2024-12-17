@@ -40,10 +40,14 @@ export const ProductCategories = () => {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="section-title mb-12 text-center">Product Categories</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-3 grid-rows-2 divide-x divide-y divide-gray-200">
           {categories.map((category, index) => (
-            <Link to={`/products/${category.title.toLowerCase().replace(/\s+/g, '-')}`} key={index}>
-              <Card className="service-card group cursor-pointer">
+            <Link 
+              to={`/products/${category.title.toLowerCase().replace(/\s+/g, '-')}`} 
+              key={index}
+              className={`relative ${index < 3 ? 'pb-8' : 'pt-8'}`}
+            >
+              <Card className="service-card group cursor-pointer border-none shadow-none">
                 <CardContent className="p-6">
                   <div className="text-4xl mb-4">{category.icon}</div>
                   <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
