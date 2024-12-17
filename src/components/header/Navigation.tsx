@@ -7,11 +7,17 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
-export const Navigation = () => (
+interface NavigationProps {
+  isScrolled: boolean;
+}
+
+export const Navigation = ({ isScrolled }: NavigationProps) => (
   <NavigationMenu>
-    <NavigationMenuList className="text-white">
+    <NavigationMenuList className={isScrolled ? "text-primary" : "text-white"}>
       <NavigationMenuItem>
-        <NavigationMenuTrigger className="hover:bg-white/10">Arneg</NavigationMenuTrigger>
+        <NavigationMenuTrigger className={`hover:${isScrolled ? "bg-primary/10" : "bg-white/10"}`}>
+          Arneg
+        </NavigationMenuTrigger>
         <NavigationMenuContent>
           <div className="grid gap-3 p-6 w-[400px] bg-white">
             <div className="text-sm">
@@ -23,7 +29,9 @@ export const Navigation = () => (
       </NavigationMenuItem>
 
       <NavigationMenuItem>
-        <NavigationMenuTrigger className="hover:bg-white/10">Condensing Units</NavigationMenuTrigger>
+        <NavigationMenuTrigger className={`hover:${isScrolled ? "bg-primary/10" : "bg-white/10"}`}>
+          Condensing Units
+        </NavigationMenuTrigger>
         <NavigationMenuContent>
           <div className="grid gap-3 p-6 w-[400px] bg-white">
             <div className="text-sm">
@@ -35,13 +43,19 @@ export const Navigation = () => (
       </NavigationMenuItem>
 
       <NavigationMenuItem>
-        <NavigationMenuLink className="hover:bg-white/10 group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+        <NavigationMenuLink
+          className={`hover:${
+            isScrolled ? "bg-primary/10" : "bg-white/10"
+          } group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50`}
+        >
           About
         </NavigationMenuLink>
       </NavigationMenuItem>
 
       <NavigationMenuItem>
-        <NavigationMenuTrigger className="hover:bg-white/10">News</NavigationMenuTrigger>
+        <NavigationMenuTrigger className={`hover:${isScrolled ? "bg-primary/10" : "bg-white/10"}`}>
+          News
+        </NavigationMenuTrigger>
         <NavigationMenuContent>
           <div className="grid gap-3 p-6 w-[400px] bg-white">
             <div className="text-sm">
