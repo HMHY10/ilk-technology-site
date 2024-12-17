@@ -11,6 +11,10 @@ import { useRef } from "react";
 
 export const BrandCarousel = () => {
   const brands = [
+    { 
+      name: "INTRAC Design & Display",
+      logo: "/lovable-uploads/93685d2f-0194-410b-8685-4e05f4c9cb43.png"
+    },
     { name: "CoolTech Solutions" },
     { name: "Arctic Systems" },
     { name: "Frost Industries" },
@@ -44,7 +48,15 @@ export const BrandCarousel = () => {
               <CarouselItem key={index} className="basis-1/4">
                 <div className="flex h-24 items-center justify-center rounded-lg bg-white/10 p-4 backdrop-blur-sm">
                   <div className="text-center">
-                    <Snowflake className="mx-auto mb-2 h-6 w-6 text-white" />
+                    {brand.logo ? (
+                      <img 
+                        src={brand.logo} 
+                        alt={brand.name}
+                        className="mx-auto mb-2 h-12 w-auto object-contain"
+                      />
+                    ) : (
+                      <Snowflake className="mx-auto mb-2 h-6 w-6 text-white" />
+                    )}
                     <p className="text-sm font-mono text-white/80">{brand.name}</p>
                   </div>
                 </div>
