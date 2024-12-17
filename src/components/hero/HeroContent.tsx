@@ -14,9 +14,6 @@ export const HeroContent = () => {
           <br />
           Distribution Partner here in the UK
         </h1>
-        <p className="mb-8 animate-fade-up text-lg text-white">
-          Industry-leading cooling solutions for your business
-        </p>
         <Button
           size="lg"
           className="animate-fade-up bg-accent text-white hover:bg-accent/90"
