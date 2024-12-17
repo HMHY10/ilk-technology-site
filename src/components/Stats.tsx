@@ -1,4 +1,5 @@
 import { Building2, Users, Award, Clock } from "lucide-react";
+import { StatItem } from "./stats/StatItem";
 
 export const Stats = () => {
   const stats = [
@@ -29,11 +30,7 @@ export const Stats = () => {
       <div className="container">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {stats.map((stat, index) => (
-            <div key={index} className="stat-item">
-              <stat.icon className="mb-4 h-8 w-8 text-accent" />
-              <div className="text-3xl font-bold text-white">{stat.value}</div>
-              <div className="text-sm text-muted">{stat.label}</div>
-            </div>
+            <StatItem key={index} {...stat} />
           ))}
         </div>
       </div>
