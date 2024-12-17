@@ -22,7 +22,12 @@ export const Hero = () => {
   ];
 
   const plugin = useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({
+      delay: 3000,
+      stopOnInteraction: false,
+      stopOnMouseEnter: false,
+      stopOnLastSnap: false
+    })
   );
 
   return (
