@@ -55,16 +55,16 @@ export const ThreeSnow = () => {
       sizeMax: 4.0,
       opacityMin: 0.1,
       opacityMax: 0.4,
-      gravity: 25.0,
+      gravity: 12.0, // Reduced from 25.0 to slow down vertical movement
     };
 
     const wind: Wind = {
       current: 0,
-      force: 0.1,
-      target: 0.1,
-      min: 0.1,
-      max: 0.2,
-      easing: 0.005,
+      force: 0.05, // Reduced from 0.1 to slow down horizontal movement
+      target: 0.05, // Reduced from 0.1
+      min: 0.05, // Reduced from 0.1
+      max: 0.1, // Reduced from 0.2
+      easing: 0.003, // Reduced from 0.005 for smoother transitions
     };
 
     const geometry = new THREE.BufferGeometry();
@@ -192,7 +192,7 @@ export const ThreeSnow = () => {
 
     const updateWind = (deltaTime: number) => {
       wind.force += (wind.target - wind.force) * wind.easing;
-      wind.current += wind.force * (deltaTime * 0.2);
+      wind.current += wind.force * (deltaTime * 0.1); // Reduced from 0.2 to slow down wind effect
 
       if (Math.random() > 0.995) {
         wind.target =
