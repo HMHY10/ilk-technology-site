@@ -7,7 +7,7 @@ export const Footer = () => {
         <div className="flex flex-col items-center gap-4">
           <div className="flex gap-6">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/ilk-technology-limited-784909342/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-accent transition-colors"
@@ -15,7 +15,7 @@ export const Footer = () => {
               <Linkedin className="h-6 w-6" />
             </a>
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=61570825201141"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-accent transition-colors"
@@ -23,7 +23,7 @@ export const Footer = () => {
               <Facebook className="h-6 w-6" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/ilktechnology/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-accent transition-colors"
