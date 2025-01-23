@@ -8,14 +8,12 @@ export const Video = () => {
         <Card className="overflow-hidden">
           <div className="aspect-video">
             <iframe
-              src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffb.watch%2Fww-IjFoZwk%2F"
+              src="https://www.youtube.com/embed/rWCD6LOn8_E"
               width="100%"
               height="100%"
               style={{ border: 'none', overflow: 'hidden' }}
-              scrolling="no"
-              frameBorder="0"
-              allowFullScreen={true}
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
             ></iframe>
           </div>
         </Card>
