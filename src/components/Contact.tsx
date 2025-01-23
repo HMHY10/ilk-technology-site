@@ -7,7 +7,7 @@ export const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: "020 8123 4567",
+      details: "0203 051 0367",
       action: "24/7 Support Available",
     },
     {

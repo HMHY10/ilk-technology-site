@@ -6,7 +6,7 @@ export const Logo = () => (
     <img
       src="/lovable-uploads/dfa13fcd-f23a-4e21-a7ff-3de03dce77ae.png"
       alt="ILK Technologies"
-      className="h-16 w-auto"
+      className="h-20 w-auto" // Increased from h-16 to h-20 (25% larger)
     />
   </Link>
 );

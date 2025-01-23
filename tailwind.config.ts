@@ -25,11 +25,11 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#0A1E3D", // Dark navy
+          DEFAULT: "#0A1E3D",
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#8E9196", // Medium gray
+          DEFAULT: "#8E9196",
           foreground: "#FFFFFF",
         },
         destructive: {
@@ -37,11 +37,11 @@ export default {
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "#E5E7EB", // Light gray
+          DEFAULT: "#E5E7EB",
           foreground: "#0A1E3D",
         },
         accent: {
-          DEFAULT: "#EA384C", // Red accent
+          DEFAULT: "#EA384C",
           foreground: "#FFFFFF",
         },
         card: {
@@ -50,7 +50,9 @@ export default {
         },
       },
       fontFamily: {
-        mono: ["JetBrains Mono", "monospace"],
+        heading: ['Playfair Display', 'serif'],
+        body: ['Gothic A1', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
       keyframes: {
         "fade-up": {

@@ -6,7 +6,13 @@
 
 @layer base {
   body {
-    @apply bg-white text-primary;
+    @apply bg-white text-primary font-body font-light;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+  button {
+    @apply font-body font-semibold;
   }
 }
 
@@ -23,5 +29,5 @@
 }
 
 .section-title {
-  @apply font-mono text-3xl font-bold md:text-4xl lg:text-5xl;
+  @apply font-heading text-3xl md:text-4xl lg:text-5xl;
 }
