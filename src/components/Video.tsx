@@ -9,10 +9,12 @@ export const Video = () => {
           <div className="aspect-video">
             <iframe
               src="https://www.youtube.com/embed/rWCD6LOn8_E"
+              title="Osaka 3 LX ECO RING"
               width="100%"
               height="100%"
               style={{ border: 'none', overflow: 'hidden' }}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             ></iframe>
           </div>
