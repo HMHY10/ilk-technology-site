@@ -27,7 +27,10 @@ export const BrandCarousel = () => {
       name: "Incold",
       logo: "/lovable-uploads/d47e8a46-3c00-48b8-8581-29ced4362b4c.png"
     },
-    { name: "CoolTech Solutions" },
+    { 
+      name: "Arneg",
+      logo: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png"
+    },
   ];
 
   const plugin = useRef(
