@@ -19,8 +19,8 @@ export const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "123 Business Street",
-      action: "Los Angeles, CA 90001",
+      details: "2 Poplar Way",
+      action: "Wembley, HA9 7RE",
     },
   ];
 
