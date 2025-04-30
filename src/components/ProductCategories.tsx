@@ -13,12 +13,12 @@ export const ProductCategories = () => {
       brands: [
         {
           name: "Arneg",
-          logo: "/lovable-uploads/7c833cb1-70df-440b-9311-9911c75d6cde.png",
+          logo: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
           link: "/products/arneg"
         },
         {
           name: "Oscartielle",
-          logo: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
+          logo: "/lovable-uploads/7c833cb1-70df-440b-9311-9911c75d6cde.png",
           link: "/products/oscartielle"
         }
       ]
