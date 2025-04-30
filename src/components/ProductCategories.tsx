@@ -61,8 +61,8 @@ export const ProductCategories = () => {
                   className="absolute inset-0 bg-cover bg-center z-0" 
                   style={{ backgroundImage: `url(${category.image})` }}
                 >
-                  {/* Blue Overlay */}
-                  <div className="absolute inset-0 bg-primary bg-opacity-80 group-hover:bg-opacity-70 transition-all duration-300"></div>
+                  {/* Blue Overlay - Reduced opacity from 80% to 40% */}
+                  <div className="absolute inset-0 bg-primary bg-opacity-40 group-hover:bg-opacity-30 transition-all duration-300"></div>
                 </div>
                 
                 <CardContent className="p-8 relative z-10 h-full flex flex-col justify-between">
