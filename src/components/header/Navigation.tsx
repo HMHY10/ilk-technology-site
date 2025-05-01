@@ -1,7 +1,11 @@
+
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import { Link } from "react-router-dom";
+
 interface NavigationProps {
   isScrolled: boolean;
 }
+
 export const Navigation = ({
   isScrolled
 }: NavigationProps) => {
@@ -17,7 +21,13 @@ export const Navigation = ({
             <div className="grid gap-3 p-6 w-[400px] bg-white">
               <div className="text-sm">
                 <h4 className="font-medium leading-none mb-3 text-primary">Products</h4>
-                <p className="text-muted-foreground">Commercial Refrigeration Solutions</p>
+                <p className="text-muted-foreground mb-2">Commercial Refrigeration Solutions</p>
+                <Link 
+                  to="/products/arneg" 
+                  className="flex items-center text-sm text-primary hover:underline"
+                >
+                  View Arneg Products <ChevronRight className="ml-1 h-3 w-3" />
+                </Link>
               </div>
             </div>
           </NavigationMenuContent>

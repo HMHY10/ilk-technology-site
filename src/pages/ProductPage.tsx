@@ -17,18 +17,32 @@ const ProductPage = () => {
     }
   }, [category]);
   
-  // Render specific page content based on the category
+  // Render specific page content based on the category or brand
   const renderPageContent = () => {
     switch (category) {
       case "arneg":
+        return <ArnegPage />;
+      case "commercial-refrigeration":
+        // For the commercial refrigeration category, we'll redirect to Arneg for now
+        // In a real application, this would show a category overview page
         return <ArnegPage />;
       default:
         return (
           <div className="container mx-auto px-4 py-16">
             <h1 className="section-title mb-8">{pageTitle}</h1>
-            <p className="text-lg text-gray-600">
-              Product details for {category} will be displayed here.
+            <p className="text-lg text-gray-600 mb-6">
+              Product details for {pageTitle} will be displayed here.
             </p>
+            {category === "oscartielle" && (
+              <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-md">
+                <p className="text-yellow-700">Oscartielle product information coming soon. Please check back later.</p>
+              </div>
+            )}
+            {category === "intrac" && (
+              <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-md">
+                <p className="text-yellow-700">INTRAC product information coming soon. Please check back later.</p>
+              </div>
+            )}
           </div>
         );
     }

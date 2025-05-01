@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -49,12 +48,7 @@ export const ProductCategories = () => {
         <h2 className="section-title mb-12 text-center">Product Categories</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {categories.map((category, index) => (
-            <Link 
-              to={category.comingSoon ? "#" : `/products/${category.title.toLowerCase().replace(/\s+/g, '-')}`} 
-              key={index}
-              className={`relative ${category.comingSoon ? 'cursor-default' : 'cursor-pointer'}`}
-              onClick={(e) => category.comingSoon && e.preventDefault()}
-            >
+            <div key={index} className="relative">
               <Card className="h-[300px] overflow-hidden border-none shadow-lg relative group">
                 {/* Background Image with Overlay */}
                 <div 
@@ -80,7 +74,7 @@ export const ProductCategories = () => {
                     )}
                     
                     {/* Brand Logos */}
-                    {category.brands && (
+                    {category.brands && category.brands.length > 0 && (
                       <div className="flex flex-col gap-4 mt-4">
                         {category.brands.map((brand, brandIndex) => (
                           <HoverCard key={brandIndex}>
@@ -111,15 +105,26 @@ export const ProductCategories = () => {
                     )}
                   </div>
                   
+                  {/* Make the entire card clickable for the main category or first brand if available */}
+                  {!category.comingSoon && (
+                    <Link 
+                      to={category.brands && category.brands.length > 0 ? category.brands[0].link : `/products/${category.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="absolute inset-0 z-5"
+                      aria-label={`View ${category.title}`}
+                    >
+                      <span className="sr-only">View {category.title}</span>
+                    </Link>
+                  )}
+                  
                   {/* Arrow icon for non-coming soon categories */}
                   {!category.comingSoon && (
-                    <div className="self-end">
+                    <div className="self-end relative z-10">
                       <ChevronRight className="w-6 h-6 text-white transform group-hover:translate-x-2 transition-transform" />
                     </div>
                   )}
                 </CardContent>
               </Card>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
