@@ -1,6 +1,7 @@
 
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 
 interface NavigationProps {
   isScrolled: boolean;
