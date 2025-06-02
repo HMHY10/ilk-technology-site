@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 
 export const Video = () => {
@@ -8,14 +9,15 @@ export const Video = () => {
         <Card className="overflow-hidden">
           <div className="aspect-video">
             <iframe
-              src="https://www.youtube.com/embed/rWCD6LOn8_E"
-              title="Osaka 3 LX ECO RING"
+              src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F170766102980156%2Fvideos%2F3639210539470166%2F&show_text=false&width=560&t=0"
+              title="Arneg in Action"
               width="100%"
               height="100%"
               style={{ border: 'none', overflow: 'hidden' }}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
+              scrolling="no"
+              frameBorder="0"
+              allowFullScreen={true}
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
             ></iframe>
           </div>
         </Card>
