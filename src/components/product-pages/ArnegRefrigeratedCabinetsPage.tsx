@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -7,7 +6,7 @@ import { Link } from "react-router-dom";
 import { DynamicFrameLayout } from "@/components/ui/dynamic-frame-layout";
 
 const refrigeratedCabinetsFrames = [
-  // Images from uploads mixed with videos
+  // All 10 unique cabinet images
   {
     id: 1,
     image: "/lovable-uploads/40ea40a6-3369-4a2c-bc4f-4c3fa844d0f4.png",
@@ -136,7 +135,7 @@ const refrigeratedCabinetsFrames = [
   },
   {
     id: 10,
-    image: "/lovable-uploads/40ea40a6-3369-4a2c-bc4f-4c3fa844d0f4.png",
+    image: "/lovable-uploads/7c833cb1-70df-440b-9311-9911c75d6cde.png",
     title: "Specialty Display Cabinet",
     mediaType: "image" as const,
     defaultPos: { x: 0, y: 12, w: 4, h: 4 },
@@ -150,7 +149,7 @@ const refrigeratedCabinetsFrames = [
   },
   {
     id: 11,
-    image: "/lovable-uploads/5f5aacb8-6e91-4b91-9187-4f920bfdb2fa.png",
+    image: "/lovable-uploads/93685d2f-0194-410b-8685-4e05f4c9cb43.png",
     title: "Promotional Island Cabinet",
     mediaType: "image" as const,
     defaultPos: { x: 4, y: 12, w: 4, h: 4 },
@@ -164,7 +163,7 @@ const refrigeratedCabinetsFrames = [
   },
   {
     id: 12,
-    image: "/lovable-uploads/69640c38-17ed-4b5c-a463-2ea2eb609240.png",
+    image: "/lovable-uploads/d47e8a46-3c00-48b8-8581-29ced4362b4c.png",
     title: "Combined Island System",
     mediaType: "image" as const,
     defaultPos: { x: 8, y: 12, w: 4, h: 4 },
@@ -178,7 +177,7 @@ const refrigeratedCabinetsFrames = [
   },
   {
     id: 13,
-    image: "/lovable-uploads/76b23ff7-efa3-486a-9543-807697ddd20b.png",
+    image: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     title: "Premium Refrigeration Suite",
     mediaType: "image" as const,
     defaultPos: { x: 4, y: 16, w: 4, h: 4 },
