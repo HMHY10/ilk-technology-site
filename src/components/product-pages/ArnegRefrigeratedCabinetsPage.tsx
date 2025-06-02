@@ -168,7 +168,7 @@ const refrigeratedCabinetsCards = [
     id: 1,
     content: <MultiDoorCabinet />,
     className: "col-span-1",
-    thumbnail: "/lovable-uploads/8622ac0c-bab4-404a-8ad4-6cb8cfec4160.png",
+    thumbnail: "/lovable-uploads/3a83a3aa-1a2b-4ce0-8dbc-2d841f7a09af.png",
     productName: "Multi-Door Refrigerated Display Cabinet",
   },
   {
