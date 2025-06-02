@@ -2,11 +2,14 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 
 interface Frame {
   id: number
-  video: string
+  video?: string
+  image?: string
+  title: string
+  mediaType: 'image' | 'video'
   defaultPos: { x: number; y: number; w: number; h: number }
   corner: string
   edgeHorizontal: string
@@ -18,7 +21,10 @@ interface Frame {
 }
 
 interface FrameComponentProps {
-  video: string
+  video?: string
+  image?: string
+  title: string
+  mediaType: 'image' | 'video'
   width: number | string
   height: number | string
   className?: string
@@ -34,6 +40,9 @@ interface FrameComponentProps {
 
 function FrameComponent({
   video,
+  image,
+  title,
+  mediaType,
   width,
   height,
   className = "",
@@ -49,12 +58,12 @@ function FrameComponent({
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
-    if (isHovered) {
+    if (isHovered && mediaType === 'video') {
       videoRef.current?.play()
-    } else {
+    } else if (mediaType === 'video') {
       videoRef.current?.pause()
     }
-  }, [isHovered])
+  }, [isHovered, mediaType])
 
   return (
     <div
@@ -86,16 +95,39 @@ function FrameComponent({
               transition: "transform 0.3s ease-in-out",
             }}
           >
-            <video
-              className="w-full h-full object-cover"
-              src={video}
-              loop
-              muted
-              playsInline
-              ref={videoRef}
-            />
+            {mediaType === 'video' ? (
+              <video
+                className="w-full h-full object-cover"
+                src={video}
+                loop
+                muted
+                playsInline
+                ref={videoRef}
+              />
+            ) : (
+              <img
+                className="w-full h-full object-cover"
+                src={image}
+                alt={title}
+              />
+            )}
           </div>
         </div>
+
+        {/* Animated Title Overlay */}
+        <AnimatePresence>
+          {isHovered && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3 }}
+              className="absolute top-4 right-4 z-10 bg-black bg-opacity-70 text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
+              {title}
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {showFrame && (
           <div className="absolute inset-0" style={{ zIndex: 2 }}>
@@ -224,6 +256,9 @@ export function DynamicFrameLayout({
           >
             <FrameComponent
               video={frame.video}
+              image={frame.image}
+              title={frame.title}
+              mediaType={frame.mediaType}
               width="100%"
               height="100%"
               className="absolute inset-0"

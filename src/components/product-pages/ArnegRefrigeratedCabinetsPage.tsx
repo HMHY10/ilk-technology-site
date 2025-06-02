@@ -7,10 +7,13 @@ import { Link } from "react-router-dom";
 import { DynamicFrameLayout } from "@/components/ui/dynamic-frame-layout";
 
 const refrigeratedCabinetsFrames = [
+  // Images from uploads mixed with videos
   {
     id: 1,
-    video: "https://videos.pexels.com/video-files/3196116/3196116-hd_1920_1080_30fps.mp4",
-    defaultPos: { x: 0, y: 0, w: 4, h: 4 },
+    image: "/lovable-uploads/40ea40a6-3369-4a2c-bc4f-4c3fa844d0f4.png",
+    title: "Multi-Deck Display Cabinet",
+    mediaType: "image" as const,
+    defaultPos: { x: 4, y: 0, w: 4, h: 4 },
     corner: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeHorizontal: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeVertical: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
@@ -22,7 +25,9 @@ const refrigeratedCabinetsFrames = [
   {
     id: 2,
     video: "https://videos.pexels.com/video-files/3196309/3196309-hd_1920_1080_30fps.mp4",
-    defaultPos: { x: 4, y: 0, w: 4, h: 4 },
+    title: "Refrigeration System Demo",
+    mediaType: "video" as const,
+    defaultPos: { x: 0, y: 0, w: 4, h: 4 },
     corner: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeHorizontal: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeVertical: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
@@ -33,7 +38,9 @@ const refrigeratedCabinetsFrames = [
   },
   {
     id: 3,
-    video: "https://videos.pexels.com/video-files/3130284/3130284-hd_1920_1080_30fps.mp4",
+    image: "/lovable-uploads/5f5aacb8-6e91-4b91-9187-4f920bfdb2fa.png",
+    title: "Premium Serve-Over Counter",
+    mediaType: "image" as const,
     defaultPos: { x: 8, y: 0, w: 4, h: 4 },
     corner: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeHorizontal: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
@@ -45,8 +52,10 @@ const refrigeratedCabinetsFrames = [
   },
   {
     id: 4,
-    video: "https://videos.pexels.com/video-files/3179524/3179524-hd_1920_1080_30fps.mp4",
-    defaultPos: { x: 0, y: 4, w: 4, h: 4 },
+    image: "/lovable-uploads/69640c38-17ed-4b5c-a463-2ea2eb609240.png",
+    title: "Frozen Food Island Cabinet",
+    mediaType: "image" as const,
+    defaultPos: { x: 4, y: 4, w: 4, h: 4 },
     corner: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeHorizontal: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeVertical: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
@@ -57,8 +66,10 @@ const refrigeratedCabinetsFrames = [
   },
   {
     id: 5,
-    video: "https://videos.pexels.com/video-files/5750039/5750039-hd_1920_1080_30fps.mp4",
-    defaultPos: { x: 4, y: 4, w: 4, h: 4 },
+    image: "/lovable-uploads/76b23ff7-efa3-486a-9543-807697ddd20b.png",
+    title: "Vertical Display Cabinet",
+    mediaType: "image" as const,
+    defaultPos: { x: 0, y: 4, w: 4, h: 4 },
     corner: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeHorizontal: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeVertical: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
@@ -70,6 +81,8 @@ const refrigeratedCabinetsFrames = [
   {
     id: 6,
     video: "https://videos.pexels.com/video-files/6195088/6195088-hd_1920_1080_30fps.mp4",
+    title: "Advanced Cooling Technology",
+    mediaType: "video" as const,
     defaultPos: { x: 8, y: 4, w: 4, h: 4 },
     corner: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeHorizontal: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
@@ -81,8 +94,10 @@ const refrigeratedCabinetsFrames = [
   },
   {
     id: 7,
-    video: "https://videos.pexels.com/video-files/3130389/3130389-hd_1920_1080_30fps.mp4",
-    defaultPos: { x: 0, y: 8, w: 4, h: 4 },
+    image: "/lovable-uploads/88b7bec5-0d88-4282-bb59-323234082e9b.png",
+    title: "Semi-Vertical Refrigerated Unit",
+    mediaType: "image" as const,
+    defaultPos: { x: 8, y: 8, w: 4, h: 4 },
     corner: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeHorizontal: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeVertical: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
@@ -93,8 +108,10 @@ const refrigeratedCabinetsFrames = [
   },
   {
     id: 8,
-    video: "https://videos.pexels.com/video-files/4226748/4226748-hd_1920_1080_30fps.mp4",
-    defaultPos: { x: 4, y: 8, w: 4, h: 4 },
+    image: "/lovable-uploads/dfa13fcd-f23a-4e21-a7ff-3de03dce77ae.png",
+    title: "Commercial Deli Counter",
+    mediaType: "image" as const,
+    defaultPos: { x: 0, y: 8, w: 4, h: 4 },
     corner: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeHorizontal: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeVertical: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
@@ -106,7 +123,9 @@ const refrigeratedCabinetsFrames = [
   {
     id: 9,
     video: "https://videos.pexels.com/video-files/3179483/3179483-hd_1920_1080_30fps.mp4",
-    defaultPos: { x: 8, y: 8, w: 4, h: 4 },
+    title: "Energy Efficient Systems",
+    mediaType: "video" as const,
+    defaultPos: { x: 4, y: 8, w: 4, h: 4 },
     corner: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeHorizontal: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeVertical: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
@@ -117,7 +136,9 @@ const refrigeratedCabinetsFrames = [
   },
   {
     id: 10,
-    video: "https://videos.pexels.com/video-files/4662009/4662009-hd_1920_1080_30fps.mp4",
+    image: "/lovable-uploads/40ea40a6-3369-4a2c-bc4f-4c3fa844d0f4.png",
+    title: "Specialty Display Cabinet",
+    mediaType: "image" as const,
     defaultPos: { x: 0, y: 12, w: 4, h: 4 },
     corner: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeHorizontal: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
@@ -129,7 +150,9 @@ const refrigeratedCabinetsFrames = [
   },
   {
     id: 11,
-    video: "https://videos.pexels.com/video-files/4663208/4663208-hd_1920_1080_30fps.mp4",
+    image: "/lovable-uploads/5f5aacb8-6e91-4b91-9187-4f920bfdb2fa.png",
+    title: "Promotional Island Cabinet",
+    mediaType: "image" as const,
     defaultPos: { x: 4, y: 12, w: 4, h: 4 },
     corner: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeHorizontal: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
@@ -141,7 +164,9 @@ const refrigeratedCabinetsFrames = [
   },
   {
     id: 12,
-    video: "https://videos.pexels.com/video-files/5748870/5748870-hd_1920_1080_30fps.mp4",
+    image: "/lovable-uploads/69640c38-17ed-4b5c-a463-2ea2eb609240.png",
+    title: "Combined Island System",
+    mediaType: "image" as const,
     defaultPos: { x: 8, y: 12, w: 4, h: 4 },
     corner: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeHorizontal: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
@@ -153,7 +178,9 @@ const refrigeratedCabinetsFrames = [
   },
   {
     id: 13,
-    video: "https://videos.pexels.com/video-files/5750262/5750262-hd_1920_1080_30fps.mp4",
+    image: "/lovable-uploads/76b23ff7-efa3-486a-9543-807697ddd20b.png",
+    title: "Premium Refrigeration Suite",
+    mediaType: "image" as const,
     defaultPos: { x: 4, y: 16, w: 4, h: 4 },
     corner: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
     edgeHorizontal: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png",
@@ -180,7 +207,7 @@ export const ArnegRefrigeratedCabinetsPage = () => {
             </Button>
             <h1 className="text-4xl font-bold mb-4 text-white">Refrigerated Cabinets</h1>
             <p className="text-lg text-gray-300 mb-8">
-              Explore our complete range of premium refrigerated display cabinets designed for optimal food preservation and visual appeal.
+              Explore our complete range of premium refrigerated display cabinets designed for optimal food preservation and visual appeal. Hover over each product to see detailed information.
             </p>
           </div>
           
@@ -196,7 +223,7 @@ export const ArnegRefrigeratedCabinetsPage = () => {
           
           <div className="mt-8 text-center">
             <p className="text-gray-400 text-sm">
-              Hover over each product to see it in action. Each cabinet is designed with Italian craftsmanship and cutting-edge technology.
+              Hover over each product to see detailed information. Each cabinet is designed with Italian craftsmanship and cutting-edge technology.
             </p>
           </div>
         </div>
