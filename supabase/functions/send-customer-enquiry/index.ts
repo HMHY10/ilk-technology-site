@@ -75,7 +75,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send email using Resend
     const emailResponse = await resend.emails.send({
       from: "ILK Technology Website <onboarding@resend.dev>",
-      to: ["info@ilktechnology.com"],
+      to: ["sales@ilktechnology.com"],
       subject: `Customer Enquiry ${enquiry.name} - ${currentDate}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
