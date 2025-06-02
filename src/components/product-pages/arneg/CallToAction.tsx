@@ -1,5 +1,5 @@
 
-import { Button } from "@/components/ui/button";
+import { ServiceRequestForm } from "@/components/forms/ServiceRequestForm";
 
 interface CallToActionProps {
   title: string;
@@ -19,9 +19,7 @@ export const CallToAction = ({
         <p className="text-xl mb-8 max-w-3xl mx-auto">
           {description}
         </p>
-        <Button size="lg" className="bg-accent hover:bg-accent/90">
-          {buttonText}
-        </Button>
+        <ServiceRequestForm buttonText={buttonText} />
       </div>
     </section>
   );
