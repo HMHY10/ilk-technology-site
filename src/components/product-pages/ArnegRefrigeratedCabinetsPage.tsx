@@ -119,19 +119,19 @@ const refrigeratedCabinetsFrames = [
 
 export const ArnegRefrigeratedCabinetsPage = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-zinc-900">
+    <div className="min-h-screen flex flex-col bg-white">
       <Header />
       <main className="flex-grow pt-20">
         <div className="container mx-auto px-4 py-8">
           <div className="mb-8">
-            <Button variant="outline" className="mb-4 bg-white text-zinc-900 hover:bg-gray-100" asChild>
+            <Button variant="outline" className="mb-4 bg-white text-primary border-primary hover:bg-primary hover:text-white" asChild>
               <Link to="/products/arneg">
                 <ChevronLeft className="mr-2 h-4 w-4" />
                 Back to Arneg Products
               </Link>
             </Button>
-            <h1 className="text-4xl font-bold mb-4 text-white">Refrigerated Cabinets</h1>
-            <p className="text-lg text-gray-300 mb-8">
+            <h1 className="text-4xl font-bold mb-4 text-primary">Refrigerated Cabinets</h1>
+            <p className="text-lg text-gray-600 mb-8">
               Explore our complete range of premium refrigerated display cabinets designed for optimal food preservation and visual appeal. Hover over each product to see them in action.
             </p>
           </div>
@@ -147,7 +147,7 @@ export const ArnegRefrigeratedCabinetsPage = () => {
           </div>
           
           <div className="mt-8 text-center">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-500 text-sm">
               Hover over each product to see detailed information. Each cabinet is designed with Italian craftsmanship and cutting-edge technology.
             </p>
           </div>
