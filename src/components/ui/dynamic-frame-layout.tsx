@@ -2,14 +2,11 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 
 interface Frame {
   id: number
-  video?: string
-  image?: string
-  title: string
-  mediaType: 'image' | 'video'
+  video: string
   defaultPos: { x: number; y: number; w: number; h: number }
   corner: string
   edgeHorizontal: string
@@ -21,10 +18,7 @@ interface Frame {
 }
 
 interface FrameComponentProps {
-  video?: string
-  image?: string
-  title: string
-  mediaType: 'image' | 'video'
+  video: string
   width: number | string
   height: number | string
   className?: string
@@ -40,9 +34,6 @@ interface FrameComponentProps {
 
 function FrameComponent({
   video,
-  image,
-  title,
-  mediaType,
   width,
   height,
   className = "",
@@ -58,12 +49,12 @@ function FrameComponent({
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
-    if (isHovered && mediaType === 'video') {
+    if (isHovered) {
       videoRef.current?.play()
-    } else if (mediaType === 'video') {
+    } else {
       videoRef.current?.pause()
     }
-  }, [isHovered, mediaType])
+  }, [isHovered])
 
   return (
     <div
@@ -95,39 +86,16 @@ function FrameComponent({
               transition: "transform 0.3s ease-in-out",
             }}
           >
-            {mediaType === 'video' ? (
-              <video
-                className="w-full h-full object-cover"
-                src={video}
-                loop
-                muted
-                playsInline
-                ref={videoRef}
-              />
-            ) : (
-              <img
-                className="w-full h-full object-cover"
-                src={image}
-                alt={title}
-              />
-            )}
+            <video
+              className="w-full h-full object-cover"
+              src={video}
+              loop
+              muted
+              playsInline
+              ref={videoRef}
+            />
           </div>
         </div>
-
-        {/* Animated Title Overlay */}
-        <AnimatePresence>
-          {isHovered && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
-              className="absolute top-4 right-4 z-10 bg-black bg-opacity-70 text-white px-3 py-2 rounded-md text-sm font-medium"
-            >
-              {title}
-            </motion.div>
-          )}
-        </AnimatePresence>
 
         {showFrame && (
           <div className="absolute inset-0" style={{ zIndex: 2 }}>
@@ -208,10 +176,10 @@ export function DynamicFrameLayout({
   const [hovered, setHovered] = useState<{ row: number; col: number } | null>(null)
 
   const getRowSizes = () => {
-    if (hovered === null) return "4fr 4fr 4fr 1fr"
+    if (hovered === null) return "4fr 4fr 4fr"
     const { row } = hovered
-    const nonHoveredSize = (12 - hoverSize) / 3
-    return [0, 1, 2, 3].map((r) => (r === row ? `${hoverSize}fr` : `${nonHoveredSize}fr`)).join(" ")
+    const nonHoveredSize = (12 - hoverSize) / 2
+    return [0, 1, 2].map((r) => (r === row ? `${hoverSize}fr` : `${nonHoveredSize}fr`)).join(" ")
   }
 
   const getColSizes = () => {
@@ -256,9 +224,6 @@ export function DynamicFrameLayout({
           >
             <FrameComponent
               video={frame.video}
-              image={frame.image}
-              title={frame.title}
-              mediaType={frame.mediaType}
               width="100%"
               height="100%"
               className="absolute inset-0"
