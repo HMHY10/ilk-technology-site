@@ -11,6 +11,6 @@ export const ContactInfo = ({
     </a>
     <a href="mailto:info@ilktechnologies.com" className={`flex items-center gap-2 text-sm font-medium ${isScrolled ? "text-primary hover:text-accent" : "text-primary hover:text-accent"}`}>
       <Mail className="h-4 w-4 sm:text-inherit text-accent" />
-      <span className="hidden sm:inline">info@ilktechnology.com</span>
+      <span className="hidden sm:inline">sales@ilktechnology.com</span>
     </a>
   </div>;
