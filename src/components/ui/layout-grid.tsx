@@ -3,17 +3,21 @@
 import React, { useState, useRef, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { BrochureDownloadForm } from "@/components/forms/BrochureDownloadForm";
 
 type Card = {
   id: number;
   content: JSX.Element | React.ReactNode | string;
   className: string;
   thumbnail: string;
+  productName?: string;
 };
 
 export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   const [selected, setSelected] = useState<Card | null>(null);
   const [lastSelected, setLastSelected] = useState<Card | null>(null);
+  const [showBrochureForm, setShowBrochureForm] = useState(false);
 
   const handleClick = (card: Card) => {
     setLastSelected(selected);
@@ -23,6 +27,10 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   const handleOutsideClick = () => {
     setLastSelected(selected);
     setSelected(null);
+  };
+
+  const handleDownloadBrochure = () => {
+    setShowBrochureForm(true);
   };
 
   return (
@@ -42,7 +50,12 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
             )}
             layoutId={`card-${card.id}`}
           >
-            {selected?.id === card.id && <SelectedCard selected={selected} />}
+            {selected?.id === card.id && (
+              <SelectedCard 
+                selected={selected} 
+                onDownloadBrochure={handleDownloadBrochure}
+              />
+            )}
             <ImageComponent card={card} />
           </motion.div>
         </div>
@@ -54,6 +67,12 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
           selected?.id ? "pointer-events-auto" : "pointer-events-none"
         )}
         animate={{ opacity: selected?.id ? 0.3 : 0 }}
+      />
+      
+      <BrochureDownloadForm
+        isOpen={showBrochureForm}
+        onClose={() => setShowBrochureForm(false)}
+        productName={selected?.productName || "Product"}
       />
     </div>
   );
@@ -74,7 +93,13 @@ const ImageComponent = ({ card }: { card: Card }) => {
   );
 };
 
-const SelectedCard = ({ selected }: { selected: Card | null }) => {
+const SelectedCard = ({ 
+  selected, 
+  onDownloadBrochure 
+}: { 
+  selected: Card | null;
+  onDownloadBrochure: () => void;
+}) => {
   return (
     <div className="bg-transparent h-full w-full flex flex-col justify-end rounded-lg shadow-2xl relative z-[60]">
       <motion.div
@@ -107,6 +132,14 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
         className="relative px-8 pb-4 z-[70]"
       >
         {selected?.content}
+        <div className="mt-6">
+          <Button 
+            onClick={onDownloadBrochure}
+            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 text-lg"
+          >
+            Download Brochure
+          </Button>
+        </div>
       </motion.div>
     </div>
   );
