@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import ProductPage from "./pages/ProductPage";
 import { ArnegCategoryPage } from "./components/product-pages/ArnegCategoryPage";
+import { ArnegRefrigeratedCabinetsPage } from "./components/product-pages/ArnegRefrigeratedCabinetsPage";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/products/:category" element={<ProductPage />} />
           <Route path="/products/arneg/:categoryId" element={<ArnegCategoryPage />} />
+          <Route path="/products/arneg/refrigerated-cabinets" element={<ArnegRefrigeratedCabinetsPage />} />
         </Routes>
       </BrowserRouter>
       <Toaster />

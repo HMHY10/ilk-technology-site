@@ -34,6 +34,11 @@ export const ProductCategory = ({
   // Check if this is the Refrigerated Cabinets category with 7 items
   const hasTwoColumns = subCategories.length === 7;
   
+  // Special link for refrigerated cabinets to go to the new dynamic page
+  const viewAllLink = id === "refrigerated-cabinets" 
+    ? "/products/arneg/refrigerated-cabinets" 
+    : `/products/arneg/${id}`;
+  
   return (
     <div className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8`}>
       <div className={`${hasTwoColumns ? 'md:w-2/5' : 'md:w-1/2'}`}>
@@ -100,7 +105,7 @@ export const ProductCategory = ({
         )}
         
         <Button className="mt-6 bg-accent hover:bg-accent/90" asChild>
-          <Link to={`/products/arneg/${id}`}>
+          <Link to={viewAllLink}>
             View All {title}
           </Link>
         </Button>

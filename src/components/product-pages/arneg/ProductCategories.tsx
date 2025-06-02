@@ -1,4 +1,3 @@
-
 import { Separator } from "@/components/ui/separator";
 import { ProductCategory, ProductCategoryProps } from "./ProductCategory";
 import { Refrigerator, Package, ShoppingCart, DoorClosed } from "lucide-react";
