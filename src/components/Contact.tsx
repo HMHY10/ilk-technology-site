@@ -14,7 +14,7 @@ export const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "info@ilktechnology.com",
+      details: "sales@ilktechnology.com",
       action: "We'll respond within 24 hours",
     },
     {
