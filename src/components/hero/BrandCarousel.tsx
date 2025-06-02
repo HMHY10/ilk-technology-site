@@ -16,10 +16,6 @@ export const BrandCarousel = () => {
       logo: "/lovable-uploads/93685d2f-0194-410b-8685-4e05f4c9cb43.png"
     },
     {
-      name: "Refrigeration Systems for industry",
-      logo: "/lovable-uploads/76b23ff7-efa3-486a-9543-807697ddd20b.png"
-    },
-    {
       name: "Commercial Refrigeration",
       logo: "/lovable-uploads/7c833cb1-70df-440b-9311-9911c75d6cde.png"
     },
