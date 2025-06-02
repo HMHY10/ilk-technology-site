@@ -79,15 +79,24 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 
 const ImageComponent = ({ card }: { card: Card }) => {
   return (
-    <motion.img
-      layoutId={`image-${card.id}-image`}
-      src={card.thumbnail}
-      loading="lazy"
-      className={cn(
-        "object-cover object-center absolute inset-0 h-full w-full transition duration-200"
+    <div className="relative h-full w-full">
+      <motion.img
+        layoutId={`image-${card.id}-image`}
+        src={card.thumbnail}
+        loading="lazy"
+        className={cn(
+          "object-contain object-center absolute inset-0 h-full w-full transition duration-200 p-2"
+        )}
+        alt="thumbnail"
+      />
+      {card.productName && (
+        <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2">
+          <h3 className="text-red-600 font-heading font-bold text-sm md:text-base text-center leading-tight">
+            {card.productName}
+          </h3>
+        </div>
       )}
-      alt="thumbnail"
-    />
+    </div>
   );
 };
 
