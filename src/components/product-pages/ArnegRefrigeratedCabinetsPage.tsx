@@ -269,7 +269,7 @@ export const ArnegRefrigeratedCabinetsPage = () => {
             </p>
           </div>
           
-          <div className="h-[80vh] w-full border border-gray-200 rounded-lg overflow-hidden">
+          <div className="min-h-[90vh] w-full border border-gray-200 rounded-lg overflow-hidden">
             <LayoutGrid cards={refrigeratedCabinetsCards} />
           </div>
           
