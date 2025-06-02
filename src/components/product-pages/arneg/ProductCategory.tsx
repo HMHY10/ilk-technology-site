@@ -1,7 +1,6 @@
 
 import { LucideIcon } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 
@@ -42,31 +41,22 @@ export const ProductCategory = ({
   return (
     <div className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8`}>
       <div className={`${hasTwoColumns ? 'md:w-2/5' : 'md:w-1/2'}`}>
-        <Card className="overflow-hidden h-full border-none shadow-md">
+        <div className="overflow-hidden h-full">
           <div className={`relative ${hasTwoColumns ? 'h-56' : 'h-64'}`}>
-            {/* Brand Logo as Full Background Image */}
+            {/* Brand Logo as Full Background Image - No overlays or borders */}
             {brandLogo ? (
               <div 
                 className="absolute inset-0 bg-cover bg-center" 
                 style={{ backgroundImage: `url(${brandLogo})` }}
-              >
-                <div className="absolute inset-0 bg-primary bg-opacity-40"></div>
-              </div>
+              ></div>
             ) : (
               <div 
                 className="absolute inset-0 bg-cover bg-center" 
                 style={{ backgroundImage: `url(${image})` }}
-              >
-                <div className="absolute inset-0 bg-primary bg-opacity-40"></div>
-              </div>
+              ></div>
             )}
-            
-            {/* Category Icon Overlay */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <Icon className="h-24 w-24 text-white" />
-            </div>
           </div>
-        </Card>
+        </div>
       </div>
       
       <div className={`${hasTwoColumns ? 'md:w-3/5' : 'md:w-1/2'}`}>
