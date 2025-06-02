@@ -1,6 +1,7 @@
-import { Button } from "@/components/ui/button";
+
 import { Mail, MapPin, Phone } from "lucide-react";
 import { ContactCard } from "./contact/ContactCard";
+import { ServiceRequestForm } from "./forms/ServiceRequestForm";
 
 export const Contact = () => {
   const contactInfo = [
@@ -34,9 +35,7 @@ export const Contact = () => {
           ))}
         </div>
         <div className="mt-12 text-center">
-          <Button size="lg" className="bg-accent text-white hover:bg-accent/90">
-            Schedule a Consultation
-          </Button>
+          <ServiceRequestForm buttonText="Schedule a Consultation" source="Contact Section" />
         </div>
       </div>
     </div>
