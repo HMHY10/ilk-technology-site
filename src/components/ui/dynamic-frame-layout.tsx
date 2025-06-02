@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useState, useEffect, useRef } from "react"
@@ -6,7 +5,9 @@ import { motion } from "framer-motion"
 
 interface Frame {
   id: number
-  video: string
+  video?: string
+  image?: string
+  title?: string
   defaultPos: { x: number; y: number; w: number; h: number }
   corner: string
   edgeHorizontal: string
@@ -18,7 +19,9 @@ interface Frame {
 }
 
 interface FrameComponentProps {
-  video: string
+  video?: string
+  image?: string
+  title?: string
   width: number | string
   height: number | string
   className?: string
@@ -34,6 +37,8 @@ interface FrameComponentProps {
 
 function FrameComponent({
   video,
+  image,
+  title,
   width,
   height,
   className = "",
@@ -49,12 +54,12 @@ function FrameComponent({
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
-    if (isHovered) {
+    if (isHovered && video) {
       videoRef.current?.play()
-    } else {
+    } else if (video) {
       videoRef.current?.pause()
     }
-  }, [isHovered])
+  }, [isHovered, video])
 
   return (
     <div
@@ -79,21 +84,35 @@ function FrameComponent({
           }}
         >
           <div
-            className="w-full h-full overflow-hidden"
+            className="w-full h-full overflow-hidden relative"
             style={{
               transform: `scale(${mediaSize})`,
               transformOrigin: "center",
               transition: "transform 0.3s ease-in-out",
             }}
           >
-            <video
-              className="w-full h-full object-cover"
-              src={video}
-              loop
-              muted
-              playsInline
-              ref={videoRef}
-            />
+            {video ? (
+              <video
+                className="w-full h-full object-cover"
+                src={video}
+                loop
+                muted
+                playsInline
+                ref={videoRef}
+              />
+            ) : image ? (
+              <img
+                className="w-full h-full object-cover"
+                src={image}
+                alt={title || "Product image"}
+              />
+            ) : null}
+            
+            {title && (
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <h3 className="text-white text-sm font-medium">{title}</h3>
+              </div>
+            )}
           </div>
         </div>
 
@@ -224,6 +243,8 @@ export function DynamicFrameLayout({
           >
             <FrameComponent
               video={frame.video}
+              image={frame.image}
+              title={frame.title}
               width="100%"
               height="100%"
               className="absolute inset-0"
