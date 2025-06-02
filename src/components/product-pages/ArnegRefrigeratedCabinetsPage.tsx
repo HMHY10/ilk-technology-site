@@ -136,11 +136,11 @@ export const ArnegRefrigeratedCabinetsPage = () => {
             </p>
           </div>
           
-          <div className="h-[80vh] w-full">
+          <div className="h-[80vh] w-full border border-gray-200 rounded-lg overflow-hidden">
             <DynamicFrameLayout 
               frames={refrigeratedCabinetsFrames} 
               className="w-full h-full" 
-              showFrames={false}
+              showFrames={true}
               hoverSize={6}
               gapSize={4}
             />
