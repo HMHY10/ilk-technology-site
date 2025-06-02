@@ -20,7 +20,8 @@ export const ProductCategories = () => {
         { name: "Promotional Islands", link: "/products/arneg/promotional-islands" },
         { name: "Specialty Cabinets", link: "/products/arneg/specialty-cabinets" },
       ],
-      image: "/lovable-uploads/00167a73-438d-4e7e-862d-31ff4ffcbdf2.png"
+      image: "/lovable-uploads/00167a73-438d-4e7e-862d-31ff4ffcbdf2.png",
+      brandLogo: "/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png"
     },
     {
       id: "refrigeration-systems",
@@ -32,7 +33,8 @@ export const ProductCategories = () => {
         { name: "Plug-in Systems", link: "/products/arneg/plug-in-systems" },
         { name: "Waterloop Systems", link: "/products/arneg/waterloop-systems" },
       ],
-      image: "/lovable-uploads/4d5b979d-be0d-4bee-b458-3d6b9fa1dcb0.png"
+      image: "/lovable-uploads/4d5b979d-be0d-4bee-b458-3d6b9fa1dcb0.png",
+      brandLogo: "/lovable-uploads/7c833cb1-70df-440b-9311-9911c75d6cde.png"
     },
     {
       id: "furnishing-solutions",

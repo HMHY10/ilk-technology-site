@@ -17,6 +17,7 @@ export interface ProductCategoryProps {
   icon: LucideIcon;
   subCategories: SubCategory[];
   image: string;
+  brandLogo?: string;
   isReversed?: boolean;
 }
 
@@ -27,6 +28,7 @@ export const ProductCategory = ({
   icon: Icon,
   subCategories,
   image,
+  brandLogo,
   isReversed = false
 }: ProductCategoryProps) => {
   return (
@@ -40,9 +42,23 @@ export const ProductCategory = ({
             >
               <div className="absolute inset-0 bg-primary bg-opacity-40"></div>
             </div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <Icon className="h-24 w-24 text-white" />
-            </div>
+            
+            {/* Brand Logo in Background */}
+            {brandLogo ? (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="bg-white/90 p-6 rounded-lg">
+                  <img 
+                    src={brandLogo} 
+                    alt={`${title} brand logo`}
+                    className="h-16 w-auto object-contain opacity-80"
+                  />
+                </div>
+              </div>
+            ) : (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Icon className="h-24 w-24 text-white" />
+              </div>
+            )}
           </div>
         </Card>
       </div>
