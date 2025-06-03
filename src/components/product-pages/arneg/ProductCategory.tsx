@@ -1,4 +1,5 @@
 
+
 import { LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
@@ -65,11 +66,10 @@ export const ProductCategory = ({
             {subCategories.map((subcat, idx) => (
               <div 
                 key={idx} 
-                className="block py-2 px-4 rounded-md transition-colors cursor-not-allowed flex items-center text-gray-400"
+                className="block py-2 px-4 rounded-md transition-colors hover:bg-gray-100 flex items-center cursor-not-allowed"
               >
-                <ChevronRight className="h-5 w-5 text-gray-300 mr-2" />
+                <ChevronRight className="h-5 w-5 text-accent mr-2" />
                 <span>{subcat.name}</span>
-                <span className="ml-2 text-xs text-gray-400">(Coming Soon)</span>
               </div>
             ))}
           </div>
@@ -78,23 +78,23 @@ export const ProductCategory = ({
             {subCategories.map((subcat, idx) => (
               <div 
                 key={idx} 
-                className="block py-2 px-4 rounded-md transition-colors cursor-not-allowed flex items-center text-gray-400"
+                className="block py-2 px-4 rounded-md transition-colors hover:bg-gray-100 flex items-center cursor-not-allowed"
               >
-                <ChevronRight className="h-5 w-5 text-gray-300 mr-2" />
+                <ChevronRight className="h-5 w-5 text-accent mr-2" />
                 <span>{subcat.name}</span>
-                <span className="ml-2 text-xs text-gray-400">(Coming Soon)</span>
               </div>
             ))}
           </div>
         )}
         
         <Button 
-          className="mt-6 bg-gray-300 hover:bg-gray-300 cursor-not-allowed text-gray-600" 
+          className="mt-6 bg-accent hover:bg-accent/90 cursor-not-allowed" 
           disabled
         >
-          View All {title} (Coming Soon)
+          View All {title}
         </Button>
       </div>
     </div>
   );
 };
+
