@@ -52,11 +52,21 @@ export const SearchBar = ({ isScrolled }: SearchBarProps) => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
+    console.log('Search input changed:', value); // Debug log
     setSearchQuery(value);
+    // Always open dropdown when there's text, regardless of results
     setIsSearchOpen(value.length > 0);
   };
 
+  const handleInputFocus = () => {
+    console.log('Search input focused, query:', searchQuery); // Debug log
+    if (searchQuery.length > 0) {
+      setIsSearchOpen(true);
+    }
+  };
+
   const handleResultClick = (result: any) => {
+    console.log('Search result clicked:', result); // Debug log
     if (result.url) {
       navigate(result.url);
     } else if (result.action) {
@@ -72,6 +82,8 @@ export const SearchBar = ({ isScrolled }: SearchBarProps) => {
     acc[result.category].push(result);
     return acc;
   }, {} as Record<string, typeof searchResults>);
+
+  console.log('Current search state:', { searchQuery, searchResults: searchResults.length, isSearchOpen }); // Debug log
 
   return (
     <div className="relative hidden md:block">
@@ -89,7 +101,7 @@ export const SearchBar = ({ isScrolled }: SearchBarProps) => {
               placeholder="Search... (⌘K)"
               value={searchQuery}
               onChange={handleInputChange}
-              onFocus={() => searchQuery && setIsSearchOpen(true)}
+              onFocus={handleInputFocus}
               className={`pl-8 pr-8 w-[250px] h-9 ${
                 isScrolled
                   ? "bg-primary/10 border-primary/20 text-primary placeholder:text-primary/60"
@@ -109,14 +121,22 @@ export const SearchBar = ({ isScrolled }: SearchBarProps) => {
           </div>
         </PopoverTrigger>
         <PopoverContent 
-          className="w-[350px] p-0 bg-white border shadow-lg z-50" 
+          className="w-[350px] p-0 bg-white border shadow-xl z-[100]" 
           align="start"
           sideOffset={4}
+          onOpenAutoFocus={(e) => e.preventDefault()}
         >
-          <Command>
+          <Command shouldFilter={false}>
             <CommandList className="max-h-[300px]">
               {searchResults.length === 0 && searchQuery && (
-                <CommandEmpty>No results found for "{searchQuery}"</CommandEmpty>
+                <CommandEmpty className="py-6 text-center text-sm">
+                  No results found for "{searchQuery}"
+                </CommandEmpty>
+              )}
+              {searchResults.length === 0 && !searchQuery && (
+                <div className="py-6 text-center text-sm text-gray-500">
+                  Start typing to search...
+                </div>
               )}
               {Object.entries(groupedResults).map(([category, results]) => (
                 <CommandGroup key={category} heading={category}>
@@ -124,11 +144,11 @@ export const SearchBar = ({ isScrolled }: SearchBarProps) => {
                     <CommandItem
                       key={result.id}
                       onSelect={() => handleResultClick(result)}
-                      className="cursor-pointer px-4 py-2 hover:bg-gray-100"
+                      className="cursor-pointer px-4 py-3 hover:bg-gray-100 transition-colors"
                     >
-                      <div className="flex flex-col">
-                        <span className="font-medium text-sm">{result.title}</span>
-                        <span className="text-xs text-gray-600 line-clamp-1">
+                      <div className="flex flex-col w-full">
+                        <span className="font-medium text-sm text-gray-900">{result.title}</span>
+                        <span className="text-xs text-gray-600 line-clamp-2 mt-1">
                           {result.description}
                         </span>
                       </div>

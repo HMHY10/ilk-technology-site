@@ -9,6 +9,7 @@ export interface SearchResult {
   category: string;
   url?: string;
   action?: () => void;
+  keywords?: string[];
 }
 
 interface SearchContextType {
@@ -43,6 +44,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       title: 'Commercial Cooling',
       description: 'State-of-the-art refrigeration systems for businesses',
       category: 'Services',
+      keywords: ['cooling', 'refrigeration', 'commercial', 'business', 'systems'],
       action: () => {
         navigate('/');
         setTimeout(() => {
@@ -55,6 +57,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       title: 'Industrial Solutions',
       description: 'Large-scale industrial refrigeration installations',
       category: 'Services',
+      keywords: ['industrial', 'large-scale', 'installations', 'solutions'],
       action: () => {
         navigate('/');
         setTimeout(() => {
@@ -67,6 +70,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       title: 'Maintenance',
       description: '24/7 maintenance and repair services',
       category: 'Services',
+      keywords: ['maintenance', 'repair', '24/7', 'service', 'support'],
       action: () => {
         navigate('/');
         setTimeout(() => {
@@ -79,6 +83,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       title: 'Support',
       description: 'Expert technical support and consultation',
       category: 'Services',
+      keywords: ['support', 'technical', 'expert', 'consultation', 'help'],
       action: () => {
         navigate('/');
         setTimeout(() => {
@@ -92,6 +97,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       title: 'Commercial Refrigeration',
       description: 'Display cases, coolers, and freezers for retail environments',
       category: 'Product Categories',
+      keywords: ['commercial', 'refrigeration', 'display', 'cases', 'coolers', 'freezers', 'retail'],
       url: '/products/arneg'
     },
     {
@@ -99,13 +105,15 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       title: 'Display Cases',
       description: 'Premium display solutions for food retail',
       category: 'Product Categories',
+      keywords: ['display', 'cases', 'premium', 'food', 'retail', 'showcase'],
       url: '/products/intrac'
     },
     {
       id: 'category-condensing-units',
       title: 'Condensing Units',
       description: 'High-efficiency condensing units for various applications',
-      category: 'Product Categories'
+      category: 'Product Categories',
+      keywords: ['condensing', 'units', 'efficiency', 'applications']
     },
     // Brands
     {
@@ -113,6 +121,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       title: 'Arneg',
       description: 'Italian-crafted commercial refrigeration solutions',
       category: 'Brands',
+      keywords: ['arneg', 'italian', 'crafted', 'premium', 'quality'],
       url: '/products/arneg'
     },
     {
@@ -120,6 +129,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       title: 'Oscartielle',
       description: 'Commercial refrigeration equipment',
       category: 'Brands',
+      keywords: ['oscartielle', 'equipment'],
       url: '/products/oscartielle'
     },
     {
@@ -127,6 +137,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       title: 'INTRAC',
       description: 'Display case solutions',
       category: 'Brands',
+      keywords: ['intrac', 'display', 'solutions'],
       url: '/products/intrac'
     },
     // Product Features
@@ -135,6 +146,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       title: 'Advanced Security',
       description: 'State-of-the-art security features ensuring your equipment safety',
       category: 'Product Features',
+      keywords: ['security', 'advanced', 'safety', 'protection', 'features'],
       action: () => {
         navigate('/');
         setTimeout(() => {
@@ -147,6 +159,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       title: 'Energy Efficient',
       description: 'Optimized power consumption for reduced operational costs',
       category: 'Product Features',
+      keywords: ['energy', 'efficient', 'power', 'consumption', 'costs', 'optimized'],
       action: () => {
         navigate('/');
         setTimeout(() => {
@@ -159,6 +172,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       title: 'Eco-Friendly',
       description: 'Sustainable solutions with minimal environmental impact',
       category: 'Product Features',
+      keywords: ['eco', 'friendly', 'sustainable', 'environmental', 'green'],
       action: () => {
         navigate('/');
         setTimeout(() => {
@@ -172,6 +186,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       title: 'ISO Certified',
       description: 'Internationally recognized quality management standards',
       category: 'Company',
+      keywords: ['iso', 'certified', 'quality', 'standards', 'international'],
       action: () => {
         navigate('/');
         setTimeout(() => {
@@ -184,6 +199,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       title: 'Safety First',
       description: 'Rigorous safety protocols and compliance measures',
       category: 'Company',
+      keywords: ['safety', 'protocols', 'compliance', 'measures', 'rigorous'],
       action: () => {
         navigate('/');
         setTimeout(() => {
@@ -196,6 +212,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       title: 'Expert Team',
       description: 'Highly trained and certified technicians',
       category: 'Company',
+      keywords: ['expert', 'team', 'trained', 'certified', 'technicians'],
       action: () => {
         navigate('/');
         setTimeout(() => {
@@ -208,6 +225,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       title: '24/7 Support',
       description: 'Round-the-clock emergency service availability',
       category: 'Company',
+      keywords: ['24/7', 'support', 'emergency', 'service', 'availability', 'round-the-clock'],
       action: () => {
         navigate('/');
         setTimeout(() => {
@@ -217,19 +235,46 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     }
   ], [navigate]);
 
-  // Search function with debouncing
+  // Enhanced search function with better matching
   const searchResults = useMemo(() => {
-    if (!searchQuery.trim()) return [];
+    if (!searchQuery.trim()) {
+      console.log('No search query, returning empty results');
+      return [];
+    }
     
-    const query = searchQuery.toLowerCase();
-    return searchableData.filter(item =>
-      item.title.toLowerCase().includes(query) ||
-      item.description.toLowerCase().includes(query) ||
-      item.category.toLowerCase().includes(query)
-    ).slice(0, 8); // Limit to 8 results
+    const query = searchQuery.toLowerCase().trim();
+    console.log('Searching for:', query);
+    
+    const results = searchableData.filter(item => {
+      // Check title match
+      const titleMatch = item.title.toLowerCase().includes(query);
+      
+      // Check description match
+      const descriptionMatch = item.description.toLowerCase().includes(query);
+      
+      // Check keywords match
+      const keywordMatch = item.keywords?.some(keyword => 
+        keyword.toLowerCase().includes(query) || query.includes(keyword.toLowerCase())
+      );
+      
+      // Check category match
+      const categoryMatch = item.category.toLowerCase().includes(query);
+      
+      // Check partial word matches
+      const titleWords = item.title.toLowerCase().split(' ');
+      const descriptionWords = item.description.toLowerCase().split(' ');
+      const wordMatch = titleWords.some(word => word.startsWith(query)) || 
+                       descriptionWords.some(word => word.startsWith(query));
+      
+      return titleMatch || descriptionMatch || keywordMatch || categoryMatch || wordMatch;
+    }).slice(0, 8); // Limit to 8 results
+    
+    console.log('Search results found:', results.length, results);
+    return results;
   }, [searchQuery, searchableData]);
 
   const clearSearch = useCallback(() => {
+    console.log('Clearing search');
     setSearchQuery('');
     setIsSearchOpen(false);
   }, []);
