@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -6,8 +6,18 @@ import { cn } from "@/lib/utils";
 export const Introduction = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
+  useEffect(() => {
+    // Handle scrolling to section when hash is present
+    if (window.location.hash === '#about') {
+      const element = document.getElementById('about');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []);
+
   return (
-    <section className="py-16 bg-white">
+    <section id="about" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="section-title mb-8 text-center">About ILK Technology</h2>
         <Card className="border-none shadow-lg">
