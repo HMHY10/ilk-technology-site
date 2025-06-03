@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Zap, Leaf } from "lucide-react";
 
@@ -21,7 +22,7 @@ export const Products = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section id="products" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="section-title mb-12 text-center">New Product Features</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

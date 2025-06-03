@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Stats } from "@/components/Stats";
@@ -10,23 +11,26 @@ import { Products } from "@/components/Products";
 import { ProductCategories } from "@/components/ProductCategories";
 import { Video } from "@/components/Video";
 import { Footer } from "@/components/Footer";
+import { SearchProvider } from "@/contexts/SearchContext";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <Hero />
-      <Stats />
-      <Introduction />
-      <Services />
-      <Products />
-      <ProductCategories />
-      <Excellence />
-      <Video />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </div>
+    <SearchProvider>
+      <div className="min-h-screen">
+        <Header />
+        <Hero />
+        <Stats />
+        <Introduction />
+        <Services />
+        <Products />
+        <ProductCategories />
+        <Excellence />
+        <Video />
+        <Testimonials />
+        <Contact />
+        <Footer />
+      </div>
+    </SearchProvider>
   );
 };
 

@@ -1,3 +1,4 @@
+
 import { Snowflake, Factory, Settings, PhoneCall } from "lucide-react";
 import { ServiceCard } from "./services/ServiceCard";
 
@@ -26,7 +27,7 @@ export const Services = () => {
   ];
 
   return (
-    <div className="container py-16">
+    <div id="services" className="container py-16">
       <h2 className="section-title mb-12 text-center text-primary">OUR SERVICES</h2>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         {services.map((service, index) => (

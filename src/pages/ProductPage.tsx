@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Separator } from "@/components/ui/separator";
 import { ArnegPage } from "@/components/product-pages/ArnegPage";
+import { SearchProvider } from "@/contexts/SearchContext";
 
 const ProductPage = () => {
   const { category } = useParams();
@@ -49,13 +50,15 @@ const ProductPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-grow pt-20">
-        {renderPageContent()}
-      </main>
-      <Footer />
-    </div>
+    <SearchProvider>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-grow pt-20">
+          {renderPageContent()}
+        </main>
+        <Footer />
+      </div>
+    </SearchProvider>
   );
 };
 

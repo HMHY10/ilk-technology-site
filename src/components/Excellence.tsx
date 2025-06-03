@@ -1,3 +1,4 @@
+
 import { Award, Shield, Zap } from "lucide-react";
 
 export const Excellence = () => {
@@ -25,7 +26,7 @@ export const Excellence = () => {
   ];
 
   return (
-    <div className="bg-white py-16">
+    <div id="excellence" className="bg-white py-16">
       <div className="container">
         <h2 className="section-title mb-12 text-center text-primary">PROVEN EXCELLENCE</h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
