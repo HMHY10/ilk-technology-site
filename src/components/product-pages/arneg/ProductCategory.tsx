@@ -1,6 +1,5 @@
 
 import { LucideIcon } from "lucide-react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 
@@ -33,11 +32,6 @@ export const ProductCategory = ({
   // Check if this is the Refrigerated Cabinets category with 7 items
   const hasTwoColumns = subCategories.length === 7;
   
-  // Special link for refrigerated cabinets to go to the new dynamic page
-  const viewAllLink = id === "refrigerated-cabinets" 
-    ? "/products/arneg/refrigerated-cabinets" 
-    : `/products/arneg/${id}`;
-  
   return (
     <div className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8`}>
       <div className={`${hasTwoColumns ? 'md:w-2/5' : 'md:w-1/2'}`}>
@@ -69,35 +63,36 @@ export const ProductCategory = ({
         {hasTwoColumns ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
             {subCategories.map((subcat, idx) => (
-              <Link 
+              <div 
                 key={idx} 
-                to={subcat.link}
-                className="block py-2 px-4 rounded-md transition-colors hover:bg-gray-100 flex items-center"
+                className="block py-2 px-4 rounded-md transition-colors cursor-not-allowed flex items-center text-gray-400"
               >
-                <ChevronRight className="h-5 w-5 text-accent mr-2" />
+                <ChevronRight className="h-5 w-5 text-gray-300 mr-2" />
                 <span>{subcat.name}</span>
-              </Link>
+                <span className="ml-2 text-xs text-gray-400">(Coming Soon)</span>
+              </div>
             ))}
           </div>
         ) : (
           <div className="space-y-2">
             {subCategories.map((subcat, idx) => (
-              <Link 
+              <div 
                 key={idx} 
-                to={subcat.link}
-                className="block py-2 px-4 rounded-md transition-colors hover:bg-gray-100 flex items-center"
+                className="block py-2 px-4 rounded-md transition-colors cursor-not-allowed flex items-center text-gray-400"
               >
-                <ChevronRight className="h-5 w-5 text-accent mr-2" />
+                <ChevronRight className="h-5 w-5 text-gray-300 mr-2" />
                 <span>{subcat.name}</span>
-              </Link>
+                <span className="ml-2 text-xs text-gray-400">(Coming Soon)</span>
+              </div>
             ))}
           </div>
         )}
         
-        <Button className="mt-6 bg-accent hover:bg-accent/90" asChild>
-          <Link to={viewAllLink}>
-            View All {title}
-          </Link>
+        <Button 
+          className="mt-6 bg-gray-300 hover:bg-gray-300 cursor-not-allowed text-gray-600" 
+          disabled
+        >
+          View All {title} (Coming Soon)
         </Button>
       </div>
     </div>
