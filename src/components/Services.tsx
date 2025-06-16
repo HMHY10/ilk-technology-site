@@ -16,13 +16,13 @@ export const Services = () => {
     },
     {
       icon: Settings,
-      title: "Maintenance",
-      description: "24/7 maintenance and repair services",
+      title: "Installation",
+      description: "Installation services",
     },
     {
       icon: PhoneCall,
       title: "Support",
-      description: "Expert technical support and consultation",
+      description: "technical@ilktechnology.com",
     },
   ];
 
