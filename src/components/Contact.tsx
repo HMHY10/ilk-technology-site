@@ -20,7 +20,7 @@ export const Contact = () => {
     {
       icon: MapPin,
       title: "Office Address",
-      details: "2 Poplar Way",
+      details: "2 Poplar View",
       action: "Wembley, HA9 7RD",
     },
   ];
