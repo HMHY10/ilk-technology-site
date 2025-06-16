@@ -19,9 +19,9 @@ export const Contact = () => {
     },
     {
       icon: MapPin,
-      title: "Visit Us",
+      title: "Office Address",
       details: "2 Poplar Way",
-      action: "Wembley, HA9 7RE",
+      action: "Wembley, HA9 7RD",
     },
   ];
 
