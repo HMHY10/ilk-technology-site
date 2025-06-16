@@ -9,7 +9,7 @@ export const Contact = () => {
       icon: Phone,
       title: "Call Us",
       details: "0203 051 0367",
-      action: "24/7 Support Available",
+      action: "Mon-Fri 9am-5pm",
     },
     {
       icon: Mail,
@@ -19,9 +19,9 @@ export const Contact = () => {
     },
     {
       icon: MapPin,
-      title: "Office Address",
-      details: "2 Poplar View",
-      action: "Wembley, HA9 7RD",
+      title: "Visit Us",
+      details: "2 Poplar Way",
+      action: "Wembley, HA9 7RE",
     },
   ];
 
