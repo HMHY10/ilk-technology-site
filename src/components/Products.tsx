@@ -6,7 +6,7 @@ export const Products = () => {
   const features = [
     {
       icon: Shield,
-      title: "Advanced Security",
+      title: "Technologies",
       description: "State-of-the-art security features ensuring your equipment's safety",
     },
     {
