@@ -148,8 +148,7 @@ export const ServiceRequestForm = ({
                     <SelectContent className="bg-slate-50">
                       <SelectItem value="commercial-refrigeration">Commercial Refrigeration</SelectItem>
                       <SelectItem value="installation">Installation Services</SelectItem>
-                      <SelectItem value="maintenance">Maintenance & Repair</SelectItem>
-                      <SelectItem value="consultation">Design Consultation</SelectItem>
+                      <SelectItem value="consultation">Consultation</SelectItem>
                       <SelectItem value="other">Other</SelectItem>
                     </SelectContent>
                   </Select>
