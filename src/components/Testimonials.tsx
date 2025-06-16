@@ -1,3 +1,4 @@
+
 import {
   Carousel,
   CarouselContent,
@@ -10,7 +11,7 @@ import { MessageSquare } from "lucide-react";
 export const Testimonials = () => {
   const testimonials = [
     {
-      text: "ILK Technologies has transformed our business with their exceptional refrigeration solutions. Their expertise and professionalism are unmatched.",
+      text: "ILK Technology has transformed our business with their exceptional refrigeration solutions. Their expertise and professionalism are unmatched.",
       author: "John Smith",
       company: "Fresh Foods Market",
     },
