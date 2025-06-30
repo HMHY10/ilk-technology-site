@@ -7,7 +7,7 @@ export const Products = () => {
     {
       icon: Shield,
       title: "Technologies",
-      description: "State-of-the-art security features ensuring your equipment's safety",
+      description: "Improving the energy efficency of our displays",
     },
     {
       icon: Zap,
