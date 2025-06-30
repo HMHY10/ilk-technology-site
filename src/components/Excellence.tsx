@@ -5,13 +5,13 @@ export const Excellence = () => {
   const capabilities = [
     {
       icon: Award,
-      title: "ISO Certified",
-      description: "Internationally recognized quality management standards",
+      title: "Excellence",
+      description: "Taking pride in our work",
     },
     {
       icon: Shield,
-      title: "Safety First",
-      description: "Rigorous safety protocols and compliance measures",
+      title: "Trust",
+      description: "We connect the foundation for connection",
     },
     {
       icon: Award,
@@ -20,8 +20,8 @@ export const Excellence = () => {
     },
     {
       icon: Zap,
-      title: "24/7 Support",
-      description: "Round-the-clock emergency service availability",
+      title: "Support",
+      description: "Mon-Fri 9am-5pm",
     },
   ];
 
