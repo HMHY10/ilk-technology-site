@@ -8,12 +8,13 @@ import { CallToAction } from "./arneg/CallToAction";
 export const ArnegPage = () => {
   return (
     <>
-      <HeroSection 
-        backgroundImage="/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png"
-        title="Arneg Products"
-        description="Discover our complete range of high-quality, Italian-crafted commercial refrigeration solutions"
-        logoImage="/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png"
-      />
+      <section className="relative h-[60vh] min-h-[400px]">
+        <img
+          src="/lovable-uploads/3a719a7a-9fc5-4868-9d8b-c25f0808c28c.png"
+          alt="Arneg Commercial Refrigeration Solutions"
+          className="w-full h-full object-cover"
+        />
+      </section>
 
       <IntroductionSection 
         title="Who is Arneg?"
