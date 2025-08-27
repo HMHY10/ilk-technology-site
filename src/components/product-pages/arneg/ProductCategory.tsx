@@ -41,7 +41,7 @@ export const ProductCategory = ({
             {/* Brand Logo as Full Background Image - No overlays or borders */}
             {brandLogo ? (
               <div 
-                className="absolute inset-0 bg-cover bg-center" 
+                className="absolute inset-0 bg-contain bg-center bg-no-repeat p-4" 
                 style={{ backgroundImage: `url(${brandLogo})` }}
               ></div>
             ) : (
