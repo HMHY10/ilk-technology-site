@@ -45,7 +45,7 @@ export const BrochureDownloadForm = ({
 
       // Trigger download
       const link = document.createElement('a');
-      link.href = '/lovable-uploads/e63e9e9f-0571-4e05-8534-92afe566ab01.png'; // Mock brochure file
+      link.href = '/lovable-uploads/6bf0f447-7cb6-4568-b5fc-5957a373d51f.png'; // Mock brochure file
       link.download = `${productName}-brochure.pdf`;
       document.body.appendChild(link);
       link.click();
