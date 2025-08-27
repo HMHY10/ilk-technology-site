@@ -12,7 +12,7 @@ export const ProductCategories = () => {
       brands: [
         {
           name: "Arneg",
-          logo: "/lovable-uploads/6bf0f447-7cb6-4568-b5fc-5957a373d51f.png",
+          logo: "/lovable-uploads/54238183-41e7-4493-a407-da223302e60f.png",
           link: "/products/arneg"
         },
         {

@@ -20,7 +20,7 @@ export const ProductCategories = () => {
         { name: "Specialty Cabinets", link: "/products/arneg/specialty-cabinets" },
       ],
       image: "/lovable-uploads/00167a73-438d-4e7e-862d-31ff4ffcbdf2.png",
-      brandLogo: "/lovable-uploads/6bf0f447-7cb6-4568-b5fc-5957a373d51f.png"
+      brandLogo: "/lovable-uploads/54238183-41e7-4493-a407-da223302e60f.png"
     },
     {
       id: "refrigeration-systems",
