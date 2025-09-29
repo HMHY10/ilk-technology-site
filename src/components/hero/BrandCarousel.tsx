@@ -12,6 +12,10 @@ import { useRef } from "react";
 export const BrandCarousel = () => {
   const brands = [
     { 
+      name: "Commercial Refrigeration",
+      logo: "/lovable-uploads/54238183-41e7-4493-a407-da223302e60f.png"
+    },
+    { 
       name: "Shelving and check-outs",
       logo: "/lovable-uploads/93685d2f-0194-410b-8685-4e05f4c9cb43.png"
     },
@@ -22,10 +26,6 @@ export const BrandCarousel = () => {
     {
       name: "Cold Rooms, isothermal and High-Speed Doors",
       logo: "/lovable-uploads/d47e8a46-3c00-48b8-8581-29ced4362b4c.png"
-    },
-    { 
-      name: "Commercial Refrigeration",
-      logo: "/lovable-uploads/54238183-41e7-4493-a407-da223302e60f.png"
     },
   ];
 
