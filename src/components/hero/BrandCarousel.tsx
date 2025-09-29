@@ -51,19 +51,19 @@ export const BrandCarousel = () => {
         >
           <CarouselContent>
             {brands.map((brand, index) => (
-              <CarouselItem key={index} className="basis-1/4">
-                <div className="flex h-24 items-center justify-center rounded-lg bg-white/10 p-4 backdrop-blur-sm">
+              <CarouselItem key={index} className="basis-full sm:basis-1/2 lg:basis-1/4">
+                <div className="flex h-20 sm:h-22 md:h-24 items-center justify-center rounded-lg bg-white/10 p-2 sm:p-3 md:p-4 backdrop-blur-sm">
                   <div className="text-center">
                     {brand.logo ? (
                       <img 
                         src={brand.logo} 
                         alt={brand.name}
-                        className="mx-auto mb-2 h-12 w-auto object-contain"
+                        className="mx-auto mb-1 sm:mb-2 h-8 sm:h-10 md:h-12 w-auto object-contain"
                       />
                     ) : (
-                      <Snowflake className="mx-auto mb-2 h-6 w-6 text-white" />
+                      <Snowflake className="mx-auto mb-1 sm:mb-2 h-4 sm:h-5 md:h-6 w-4 sm:w-5 md:w-6 text-white" />
                     )}
-                    <p className="text-sm font-mono text-white/80">{brand.name}</p>
+                    <p className="text-xs sm:text-sm font-mono text-white/80 truncate px-1">{brand.name}</p>
                   </div>
                 </div>
               </CarouselItem>
